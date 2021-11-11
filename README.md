@@ -9,6 +9,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 <details>
+<summary>uitwerken voor kickoff</summary>
 
 ### Auteur:
 Rosella Moens
@@ -28,6 +29,7 @@ Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen.
 ## Je website
 
 <details>
+<summary>uitwerken voor kickoff</summary>
 
 ### Je opdracht:
 https://dopper.com/nl en https://shop.dopper.com/
