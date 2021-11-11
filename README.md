@@ -33,21 +33,21 @@ Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen.
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-dopper.com/nl/ en https://shop.dopper.com/
+https://dopper.com/nl en https://shop.dopper.com/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 ##### Homepage (desktop en mobile) 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/home-desktop.jpeg" width="375px" alt="Afbeelding Doppers met geanimeerde heading en button">
+<img src="images/home-desktop2.jpeg" width="375px" alt="Data van Dopper met optellende getallen animatie">
+<img src="images/home-desktop3.jpeg" width="375px" alt="Links naar de shop en customize pagina met diagonale frames">
+<img src="images/home-mobile.jpeg" width="375px" alt="Doppers met geanimeerde heading met data van Dopper">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 ##### Shop (desktop en mobile)
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/shop-desktop.jpeg" width="375px" alt="Shop landingspage met shop en customize pagina links">
+<img src="images/shop-desktop2.jpeg" width="375px" alt="Hover functies bij productlijst brand new Doppers">
+<img src="images/shop-mobile.jpeg" width="375px" alt="Shop landingspage met shop en customize pagina links">
+<img src="images/shop-mobile2.jpeg" width="375px" alt="Dopper flessen in productlijst">
 
 </details>
 
