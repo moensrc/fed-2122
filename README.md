@@ -37,8 +37,7 @@ https://dopper.com/nl en https://shop.dopper.com/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 ##### Homepage (desktop en mobile) 
-<img src="images/home-desktop.jpeg" width="375px" alt="Afbeelding Doppers met geanimeerde heading en button">
-<img src="images/home-desktop2.jpeg" width="375px" alt="Data van Dopper met optellende getallen animatie">
+<img src="images/home-desktop.jpg" width="375px" alt="Afbeelding Doppers met geanimeerde heading en button">
 <img src="images/home-desktop3.jpeg" width="375px" alt="Links naar de shop en customize pagina met diagonale frames">
 <img src="images/home-mobile.jpeg" width="375px" alt="Doppers met geanimeerde heading met data van Dopper">
 
