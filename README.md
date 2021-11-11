@@ -6,11 +6,9 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen. -->
 
-
 ## Jij
 
 <details>
-<summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
 Rosella Moens
@@ -30,7 +28,6 @@ Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen.
 ## Je website
 
 <details>
-<summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
 https://dopper.com/nl en https://shop.dopper.com/
@@ -38,7 +35,7 @@ https://dopper.com/nl en https://shop.dopper.com/
 #### Screenshot(s) van de eerste pagina (small screen): 
 ##### Homepage (desktop en mobile) 
 <img src="images/home-desktop.jpg" width="375px" alt="Afbeelding Doppers met geanimeerde heading en button">
-<img src="images/home-desktop3.jpeg" width="375px" alt="Links naar de shop en customize pagina met diagonale frames">
+<img src="images/home-desktop3.jpeg" width="375px" alt="Links naar shop en customize pagina met diagonale frames">
 <img src="images/home-mobile.jpeg" width="375px" alt="Doppers met geanimeerde heading met data van Dopper">
 
 #### Screenshot(s) van de tweede pagina (small screen):
