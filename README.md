@@ -16,7 +16,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Rosella Moens
 
 #### Je startniveau:
-wart
+Zwart
 
 #### Je focus:
 Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen. 
@@ -33,16 +33,22 @@ Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen.
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+dopper.com/nl/ en https://shop.dopper.com/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
+Homepage (desktop en mobile) 
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
+Shop 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+
 </details>
 
 
