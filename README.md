@@ -36,7 +36,7 @@ Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen.
 dopper.com/nl/ en https://shop.dopper.com/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-Homepage (desktop en mobile) 
+##### Homepage (desktop en mobile) 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
@@ -46,7 +46,7 @@ Homepage (desktop en mobile)
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-Shop 
+##### Shop (desktop en mobile)
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
 </details>
