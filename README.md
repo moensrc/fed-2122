@@ -15,7 +15,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Rosella Moens
 
 #### Je startniveau:
-Zwart
+Rood
 
 #### Je focus:
 Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen. 
