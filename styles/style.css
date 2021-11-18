@@ -3,3 +3,11 @@
   box-sizing:border-box;  
 }
 
+/* basic setup */
+/* fonts from stylesheet line 9 HTML*/
+
+*,
+html {
+    padding: 0;
+    margin: 0;
+}
