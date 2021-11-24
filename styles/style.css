@@ -3,11 +3,21 @@
   box-sizing:border-box;  
 }
 
-/* basic setup */
-/* fonts from stylesheet line 9 HTML*/
+:root {
+  --brand-color-lightblue: RGB(244, 254, 255);
+  --brand-color-darkblue: RGB(26, 47, 100);
+  --brand-color-teal: RGB(151, 214, 219);
+  --brand-color-yellow: RGB(255, 234, 127);
+  --brand-color-white: white;
+}
 
-/* *,
+/* basic setup html */
+*,
 html {
     padding: 0;
     margin: 0;
-} */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
