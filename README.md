@@ -229,8 +229,13 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. CSS Overflow (w3Schools) https://www.w3schools.com/cssref/pr_pos_overflow.asp
+2. CSS Overlays (w3Schools) https://www.w3schools.com/howto/howto_css_overlay.asp
+3. CSS border-radius (9elements) https://9elements.com/blog/css-border-radius/
+4. 
+5. 
+6. 
+7. JS/CSS Styling scroll positions https://css-tricks.com/styling-based-on-scroll-position/
+
 
 </details>
