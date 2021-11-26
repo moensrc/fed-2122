@@ -79,16 +79,16 @@ https://dopper.com/nl en https://shop.dopper.com/
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 Over het algemeen ging het opzetten van de HTML erg goed. Ik liep er tegenaan dat de breakdown schets die ik had gemaakt voor de pagina, op sommige plekken niet zo werkte als gehoopt. Deze heb ik vervolgens aangepast. 
-
+De HTML heb ik door een validator gehaald en heb ik de warnings (geen errors, yay!) weggewerkt door de HTML volledig af te maken. Ik ben begonnen met de CSS.
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| Rosella Moens     | Ilias Ouyaliz       | Hong Zhou    | student 4        |
+| Rosella Moens     | Ilias Ouyaliz       | Hong Zhou    | Stefan Radouane        |
 | ---            | ---                | ---          | ---              |
-| sections zonder heading  | werken met mediaqueries   | transparante animatie in achtergrond | en dan ik dat    |
-| h3 twee woorden apart stylen css| online fonts en iconen gebruiken | google maps op je website | dit wil ik zeker |
-| crop images asymmetrisch  | flexbox met 1 kolom of meerdere beginnen   | img grijswaarde maken op css  | ...              |
+| sections zonder heading  | werken met mediaqueries   | transparante animatie in achtergrond | a centreren in li    |
+| h3 twee woorden apart stylen css| online fonts en iconen gebruiken | google maps op je website | items aan dropdown toevoegen |
+| crop images asymmetrisch  | flexbox met 1 kolom of meerdere beginnen   | img grijswaarde maken op css  | lijst onzichtbaar maken met knop              |
 
 
 ### Verslag van meeting
@@ -100,9 +100,6 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 - ...
 
 </details>
-
-
-
 
 ## Voortgang 2 (week 3)
 
