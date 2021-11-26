@@ -69,17 +69,18 @@ https://dopper.com/nl en https://shop.dopper.com/
 
 
 
-
-
 ## Voortgang 1 (week 2)
 
 <details open>
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 Over het algemeen ging het opzetten van de HTML erg goed. Ik liep er tegenaan dat de breakdown schets die ik had gemaakt voor de pagina, op sommige plekken niet zo werkte als gehoopt. Deze heb ik vervolgens aangepast. 
 De HTML heb ik door een validator gehaald en heb ik de warnings (geen errors, yay!) weggewerkt door de HTML volledig af te maken. Ik ben begonnen met de CSS.
+<img src="images/proces-mobile1.png" width="375px" alt="Proces 1 - Mobile">
+<img src="images/proces-mobile1-snippet1.png" width="375px" alt="Proces 1 - Mobile (Snippet 1: Info section)">
+<img src="images/proces-mobile1-snippet2.png" width="375px" alt="Proces 1 - Mobile (Snippet 2: Absolute sections)">
+<img src="images/proces-mobile1-snippet3.png" width="375px" alt="Proces 1 - Mobile (Snippet 3: Header)">
 
 ### Agenda voor meeting
 samen met je groepje opstellen
@@ -100,6 +101,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 - ...
 
 </details>
+
 
 ## Voortgang 2 (week 3)
 
