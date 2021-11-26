@@ -95,10 +95,15 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- ul li nav
+- <span>40</span> in <h3></h3>
+- <h2> van sections
+- <h3>tjes voor sections in sections
+- <articles van sections in sections>
+- <a href "#"> doen!
+- <p> niet nodig bij datetime!
+- summary details goed: vooral doen
+- css clip path maker blob voor hoverimg shop.html - clippath https://bennettfeely.com/clippy/
 
 </details>
 
