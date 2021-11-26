@@ -1,23 +1,287 @@
-/* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+/*CSS Reset http://meyerweb.com/eric/tools/css/reset/ */  
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
+/* CSS Document */
+*, *::after, *::before, html {
+  box-sizing:border-box;  
+  padding: 0;
+  margin: 0;
+}
+
+/* Defining variables for color palette */
 :root {
   --brand-color-lightblue: RGB(244, 254, 255);
   --brand-color-darkblue: RGB(26, 47, 100);
   --brand-color-teal: RGB(151, 214, 219);
   --brand-color-yellow: RGB(255, 234, 127);
   --brand-color-white: white;
-}
-
-/* basic setup html */
-*,
-html {
-    padding: 0;
-    margin: 0;
+  --brand-color-black-overlay: rgba(0, 0, 0, 0.2);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 1.75em;
+  font-weight: 700;
+  color: var(--brand-color-white);
+  text-align: center;
+}
+
+h2 {
+text-align: center;
+color: var(--brand-color-darkblue);
+}
+
+h3 {
+  font-weight: 700;
+  color: var(--brand-color-darkblue);
+}
+
+p {
+  text-align: left;
+}
+
+header {
+  /* add background color as overlay to image with z-index -1 */
+  position: relative;
+  width: 100vw;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--brand-color-black-overlay);
+}
+
+header > img {
+  width: 100%;
+  display: block;
+  min-width: 120%;
+  /* height: auto; */
+  /* overflow-x: hidden; */
+
+  /* place header image as background image */
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+}
+
+header nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  top: 1em;
+
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+
+  background-color: var(--brand-color-white);
+  visibility: hidden; /* nav is hidden for now! */
+}
+
+header section:first-of-type {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  z-index: 1; /* fixed header should always be on front of other content */
+
+  padding: .5em 1em .5em 1em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: .1em solid var(--brand-color-white);
+}
+
+header section:first-of-type > img {
+  /* width: 40vw;
+  height: auto; */
+  height: 2em;
+  width: auto;
+}
+
+header section:first-of-type a img {
+  width: 2.5em;
+  height: 2.5em;
+  
+  padding: .5em;
+
+  background-color: var(--brand-color-white);
+
+  border-radius: 2em;
+}
+
+header section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 4em 2em 3em 2em;
+  /* margin: 10% 10% 15% 10%; */
+}
+
+header section:nth-of-type(2) a {
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: var(--brand-color-darkblue);
+  background-color: var(--brand-color-yellow);
+  padding: 1em;
+  margin: 1em;
+
+  border-radius: 2em;
+}
+
+main a {
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: var(--brand-color-darkblue);
+  background-color: var(--brand-color-yellow);
+  padding: 1em;
+  margin: 1em;
+
+  border-radius: 2em;
+}
+
+main > ul {
+  list-style-type: none;
+  background-color: var(--brand-color-lightblue);
+  padding: 2em;
+}
+
+main > ul p {
+  font-weight: 500;
+}
+
+main > ul li {
+  margin-bottom: 3em;
+}
+
+main > ul li h3:first-of-type {
+  font-size: 3em;
+  line-height: 1;
+}
+
+main section {
+  padding: 1em 2em 1em 2em;
+}
+
+/* specifies second section as direct child, because in section:nth-of-type(3) there is another first section*/
+main > section:first-of-type {
+  background-color: var(--brand-color-teal);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section:first-of-type img {
+  width: 50vw;
+  /* puts image first in flex-order */
+  order: -1;
+}
+
+/* specifies second section as direct child, because in section:nth-of-type(3) there is another second section*/
+main > section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--brand-color-darkblue);
+  color: var(--brand-color-white);
+}
+
+main > section:nth-of-type(2) h3{
+  color: var(--brand-color-white);
+}
+
+main > section:nth-of-type(2) img {
+  width: 50vw;
+  /* puts image first in flex-order */
+  order: -1; 
+
+  /* crops the image asymmetrically: roundness in 4 values */
+  border-radius: 12em 8em 10em 8em;
+}
+
+main section:nth-of-type(3) {
+  /* position is relative so two child sections can be placed inside it with absolute positions */
+  position: relative;
+}
+
+main section:nth-of-type(3) section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  background-color: var(--brand-color-teal);
+}
+
+main section:nth-of-type(3) section img {
+  width: 100%;
+
+  order: -1;
+}
+
+main section:nth-of-type(4) img {
+width: 100vw;
+padding: 0;
+}
+
+main section:nth-of-type(4) ul {
+  list-style: none;
+}
+
+main section:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main section:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
