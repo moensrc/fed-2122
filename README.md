@@ -96,12 +96,12 @@ samen met je groepje opstellen
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
 - ul li nav
-- <span>40</span> in <h3></h3>
-- <h2> van sections
-- <h3>tjes voor sections in sections
-- <articles van sections in sections>
+- getal als span in 1 h3
+- h2 van titels vd sections sections
+- h3tjes voor sections in sections
+- articles van sections in sections
 - <a href "#"> doen!
-- <p> niet nodig bij datetime!
+- p niet nodig bij datetime!
 - summary details goed: vooral doen
 - css clip path maker blob voor hoverimg shop.html - clippath https://bennettfeely.com/clippy/
 
