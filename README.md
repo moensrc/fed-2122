@@ -240,7 +240,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. CSS Overlays (w3Schools) https://www.w3schools.com/howto/howto_css_overlay.asp
 3. CSS border-radius (9elements) https://9elements.com/blog/css-border-radius/
 4. CSS color overlay background-image https://stackoverflow.com/questions/36679649/how-to-add-a-color-overlay-to-a-background-image/36679903 & https://css-tricks.com/snippets/css/css-box-shadow/
-5. 
+5. CSS word-break voor ul li h3 https://www.w3schools.com/cssref/css3_pr_word-break.asp
 6. 
 7. JS/CSS Styling scroll positions https://css-tricks.com/styling-based-on-scroll-position/
 
