@@ -151,6 +151,10 @@ header section:first-of-type {
   border-bottom: .1em solid var(--brand-color-white);
 }
 
+header section:first-of-type.scrollHeader {
+  background-color: var(--brand-color-white);
+}
+
 header section:first-of-type > img {
   /* width: 40vw;
   height: auto; */
@@ -293,7 +297,13 @@ main section:nth-of-type(3) article {
 
 main section:nth-of-type(3) article:first-of-type {
   position: relative;
-  right: 1.75em;
+  right: 2em;
+}
+
+main section:nth-of-type(3) article:nth-of-type(2) {
+  position: relative;
+  top: -1em;
+  left: 2em;
 }
 
 main section:nth-of-type(3) article img {
@@ -306,20 +316,46 @@ main section:nth-of-type(3) article h3 {
   padding: 1em;
 }
 
-main section:nth-of-type(4) img {
-width: 100vw;
-padding: 0;
-}
-
-main section:nth-of-type(4) ul {
-  list-style: none;
-}
-
 main section:nth-of-type(4) {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+main section:nth-of-type(4) > p {
+  text-align: center;
+}
+
+main section:nth-of-type(4) ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+main section:nth-of-type(4) ul li {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-of-type(4) ul li h3 {
+  font-weight: 900;
+  order: 3; /*puts h3 underneath image and time*/
+}
+
+main section:nth-of-type(4) ul li img {
+  max-width: 25em;
+  padding: 0;
+
+  order: 1; /* puts img above all*/ 
+}
+
+main section:nth-of-type(4) ul li time {
+  order: 2; /*puts time underneath img and above h3*/
 }
 
 main section:nth-of-type(5) {
@@ -384,3 +420,4 @@ footer > ul li a {
 footer p {
   margin-top: 2em;
 }
+
