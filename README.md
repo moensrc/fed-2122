@@ -243,6 +243,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 5. CSS word-break voor ul li h3 (w3schools) https://www.w3schools.com/cssref/css3_pr_word-break.asp
 6. JS scrollTop (stackoverflow) https://stackoverflow.com/questions/32068340/change-text-after-scrolling & https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop
 7. JS/CSS Styling scroll positions (css-tricks) https://css-tricks.com/styling-based-on-scroll-position/
-8. 
+8. JS/CSS Text animeren: voorbeelden (tobiasahlin) https://tobiasahlin.com/moving-letters/
 
 </details>
