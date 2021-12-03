@@ -133,11 +133,11 @@ Over het algemeen ging het dus erg goed deze week. Ik heb een paar vragen gestel
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| Rosella Moens     | Ilias Ouyaliz          | Hong Zhou    | student 4        |
-| ---            | ---                | ---          | ---              |
-| JS/CSS header kruisje/hamburger  | Hamburger menu layout             | en ik dit    | en dan ik dat    |
-| CSS tweede HTML pagina | CSS grid grootte | nog een punt | dit wil ik zeker |
-| Hoeveel media queries?  | Hoe exact namaken?           | ...          | ...              |
+| Rosella Moens | Ilias Ouyaliz | Hong Zhou | student 4   |
+| ---            | ---                | ---          | ---   |
+| JS/CSS header kruisje/hamburger | Hamburger menu layout | Mag een tweede css pagina?    | en dan ik dat    |
+| CSS tweede HTML pagina | CSS grid grootte | CSS background-image cover centreren? | dit wil ik zeker |
+| Hoeveel media queries?  | Hoe exact namaken? | Hover van afbeelding naar video | ...  |
 
 
 ### Verslag van meeting
