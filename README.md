@@ -71,7 +71,7 @@ https://dopper.com/nl en https://shop.dopper.com/
 
 ## Voortgang 1 (week 2)
 
-<details open>
+<details>
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
