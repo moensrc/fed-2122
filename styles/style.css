@@ -95,7 +95,7 @@ header {
 
 header nav {
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   flex-direction: column;
 
 }
@@ -117,6 +117,7 @@ header nav ul {
   /* places the nav ul above all content, but below the heading*/
   z-index: 4;
   transform: translateX(100%);
+  transition: 0.5s;
 }
 
 header nav ul.showMenu {
@@ -134,7 +135,7 @@ header nav ul li a {
 header nav ul li a:active, a:after {
   opacity: 1;
   text-decoration: underline;
-  text-decoration-style: solid 3em;
+  text-decoration-style: solid;
   text-decoration-color: var(--brand-color-yellow);
 }
 
@@ -177,6 +178,11 @@ header section:first-of-type a img {
 }
 
 header section:first-of-type a img.exitMenu {
+  background-color: var(--brand-color-darkblue);
+}
+
+
+header section:first-of-type a img.scrollHeader {
   background-color: var(--brand-color-darkblue);
 }
 
@@ -243,7 +249,8 @@ main > ul li {
 }
 
 main > ul li h3 {
-  word-break: break-word;
+  /* word-break: break-word; */
+  overflow-wrap: break-word;
   width: 8em;
 }
 
@@ -504,26 +511,28 @@ footer {
   padding: 2em;
 }
 
-/* details here*/
+/* details + summary with custom styling */
 footer details summary {
-  cursor: pointer;
+  cursor: pointer; /* add pointer cursor, because it's an interaction element */
 
   padding: .5em;
   margin: -.1em;
 
-  list-style-type: "+ ";
+  list-style-type: "+ "; /* sets custom list style to '+' */
   color: var(--brand-color-lightgray);
   border-top: .1em solid var(--brand-color-lightgray);
   border-bottom: .1em solid var(--brand-color-lightgray);
 }
 
 footer details[open] summary {
-  list-style-type: "- ";
+  list-style-type: "- "; /* changes list style, when details is open*/
 }
 
 footer ul:first-of-type { 
   list-style: none;
+  padding-left: 1em;
 }
+
 footer ul:first-of-type li {
   color: var(--brand-color-darkblue);
 }
