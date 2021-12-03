@@ -28,7 +28,10 @@ time, mark, audio, video {
   margin: 0;
 }
 
-/* Defining variables for color palette */
+/*************************/
+/* COLOR PALETTE IN ROOT */
+/*************************/
+
 :root {
   --brand-color-lightblue: RGB(244, 254, 255);
   --brand-color-darkblue: RGB(26, 47, 100);
@@ -39,6 +42,10 @@ time, mark, audio, video {
   --brand-color-black-overlay: rgba(0, 0, 0, 0.5);
 
 }
+
+/*************************/
+/* BODY AND GENERAL TEXT */
+/*************************/
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -73,6 +80,10 @@ p {
   padding-bottom: 1em;
 }
 
+/****************/
+/* HEADER + NAV */
+/****************/
+
 header {
   position: relative;
   width: 100%;
@@ -83,9 +94,6 @@ header {
   align-items: center;
   justify-content: center;
 
-  /* background: var(--brand-color-black-overlay); */
-
-  /* add background color as overlay to image with z-index -1 */
   background-image: url("../images/homepage-header.jpg");
   background-position: center top;
   background-repeat: no-repeat;
@@ -209,6 +217,10 @@ header section:nth-of-type(2) a {
   border-radius: 2em;
 }
 
+/********/
+/* MAIN */
+/********/
+
 main a, button {
   font-family: 'Poppins', sans-serif;
   font-size: 0.8em;
@@ -224,6 +236,10 @@ main a, button {
 
   border-radius: 2em;
 }
+
+/***************/
+/* INFO DOPPER */
+/***************/
 
 /* selector for the direct ul child of the main element */
 main > ul {
@@ -259,6 +275,10 @@ main > ul li h3 span {
   line-height: 1;
   padding-right: 1em;
 }
+
+/*****************/
+/* MAIN SECTIONS */
+/*****************/
 
 main section {
   padding: 6.25% 6.25% 6.25% 6.25%;
@@ -440,7 +460,7 @@ main section:nth-of-type(5) {
   background-color: var(--brand-color-lightblue);
 }
 
-section:nth-of-type(6) {
+main section:nth-of-type(6) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,7 +473,7 @@ section:nth-of-type(6) {
   padding: 10em 0em 10em 0em;
 }
 
-section:nth-of-type(6) h2 {
+main section:nth-of-type(6) h2 {
   position: relative;
   top: 4.25em;
   right: 1.5em;
@@ -465,18 +485,18 @@ section:nth-of-type(6) h2 {
   color: white;
 }
 
-section:nth-of-type(6) a {
+main section:nth-of-type(6) a {
   background-color: var(--brand-color-white);
   padding: 2.8em 2.8em 2.8em 3em;
   border-radius: 10em 8em 11em 8em;
 }
 
-section:nth-of-type(6) a img {
+main section:nth-of-type(6) a img {
   width: 2em;
   height: auto;
 }
 
-section:nth-of-type(7) {
+main section:nth-of-type(7) {
   padding-top: 2em;
 
   background-color: var(--brand-color-lightblue);
@@ -506,6 +526,10 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   font-weight: 600;
   color: var(--brand-color-lightgray);
 }
+
+/**********/
+/* FOOTER */
+/**********/
 
 footer {
   padding: 2em;
