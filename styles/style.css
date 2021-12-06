@@ -40,7 +40,6 @@ time, mark, audio, video {
   --brand-color-white: white;
   --brand-color-lightgray: lightgray;
   --brand-color-black-overlay: rgba(0, 0, 0, 0.5);
-
 }
 
 /*************************/
@@ -216,10 +215,13 @@ header section:nth-of-type(2) a {
 
   border-radius: 2em;
 }
+/**********************************************************/
+/*                      HOME PAGE                         */
+/**********************************************************/
 
-/********/
-/* MAIN */
-/********/
+/************/
+/* MAIN HOME*/
+/************/
 
 main a, button {
   font-family: 'Poppins', sans-serif;
@@ -373,13 +375,15 @@ main section:nth-of-type(3) article {
 
 main section:nth-of-type(3) article:first-of-type {
   position: relative;
-  right: 2em;
+  right: 1.5em;
+  overflow-x: hidden;
 }
 
 main section:nth-of-type(3) article:nth-of-type(2) {
   position: relative;
   top: -1em;
-  left: 1.48em;
+  left: 1.25em;
+  overflow-x: hidden;
 }
 
 main section:nth-of-type(3) article img {
@@ -440,7 +444,7 @@ main section:nth-of-type(4) ul li h3 {
 }
 
 main section:nth-of-type(4) ul li img {
-  width: 20em;
+  width: 18em;
   height: auto;
   padding: 0;
 
@@ -482,7 +486,7 @@ main section:nth-of-type(6) h2 {
   width: 60vw;
 
   text-align: left;
-  color: white;
+  color: var(--brand-color-white);
 }
 
 main section:nth-of-type(6) a {
@@ -526,6 +530,240 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   font-weight: 600;
   color: var(--brand-color-lightgray);
 }
+
+/**********************************************************/
+/*                          SHOP PAGE                     */
+/**********************************************************/
+
+/************/
+/* MAIN SHOP*/
+/************/
+.shop main {
+  color: var(--brand-color-darkblue);
+}
+
+/**********************/
+/* MAIN SHOP SECTIONS */
+/**********************/
+
+.shop main section:first-of-type {
+  background-color: var(--brand-color-white);
+  margin: 3em 0 0 0;
+  padding: 1em 1em 0 1em;
+}
+
+.shop main section:first-of-type ul {
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+
+  overflow-x: scroll;
+}
+
+.shop main section:first-of-type ul li {
+  margin: .5em;
+  white-space: nowrap;
+}
+
+.shop main section:first-of-type ul li a {
+  /* width:fit-content; */
+  padding: 0;
+  margin: 0;
+
+  font-weight: 600;
+  text-transform: initial;
+
+  color: var(--brand-color-lightgray);
+  background-color: initial;
+  border-radius: 0;
+}
+
+.shop main section:nth-of-type(2) {
+  /* position is relative so two child sections can be placed inside it with absolute positions */
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+  background-color: var(--brand-color-white);
+}
+
+.shop main section:nth-of-type(2) article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 75vw;
+
+  padding-bottom: 2em;
+}
+
+.shop main section:nth-of-type(2) article img {
+  width: 100%;
+  order: -2; /* places image before h3 + a */
+  margin-bottom: 0;
+
+  border-radius: 0;
+}
+
+.shop main section:nth-of-type(2) article h3 {
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: initial;
+
+  color: var(--brand-color-darkblue);
+  padding: 1em;
+}
+
+.shop main section:nth-of-type(2) article a {
+  margin-left: 1em;
+}
+
+.shop main section:nth-of-type(2) article:first-of-type {
+  position: relative;
+
+  background-color: var(--brand-color-yellow);
+}
+
+.shop main section:nth-of-type(2) article:first-of-type a {
+  background-color: var(--brand-color-darkblue);
+  color: var(--brand-color-white);
+}
+
+.shop main section:nth-of-type(2) article:nth-of-type(2) {
+  position: relative;
+  top: -1.2em;
+  left: 1em;
+  overflow-x: hidden;
+
+  background-color: var(--brand-color-teal);
+}
+
+.shop main section:nth-of-type(2) article:nth-of-type(2) a {
+  background-color: var(--brand-color-white);
+  color: var(--brand-color-darkblue);
+}
+
+
+
+.shop main > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: initial;
+  padding-top: 0;
+}
+
+.shop main > ul li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.shop main > ul li a {
+  padding: 0 1em 0 0;
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: var(--brand-color-darkblue);
+  background-color: initial;
+  border-radius: 0;
+}
+
+.shop main > article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  flex-direction: center;
+  align-items: center;
+
+  margin-top: 2.5em;
+}
+
+
+.shop main > article:first-of-type ul {
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+
+  list-style-type: none;
+
+  overflow-x: hidden;
+}
+
+.shop main > article:first-of-type ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative; /*position relative so we can place the svg inside the li container*/
+
+  text-align: center;
+
+  line-height: 1.8;
+}
+
+.shop main > article:first-of-type ul li h4 {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.2;
+} 
+
+.shop main > article:first-of-type ul li p {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.shop main > article:first-of-type ul li img {
+  order: -2;
+
+  width: 10em;
+  height: auto;
+}
+
+.shop main > article:first-of-type ul li svg {
+  width: 15em;
+  padding: .4em;
+
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  opacity: 0;
+}
+
+.shop main > article:first-of-type ul li:hover svg,
+.shop main > article:first-of-type ul li:active svg,
+.shop main > article:first-of-type ul li:focus svg {
+  transition: .4s ease-in-out;
+  opacity: 0.7;
+}
+
+.shop main > article:first-of-type ul li:first-of-type svg,
+.shop main > article:first-of-type ul li:nth-of-type(2) svg { 
+  fill: var(--brand-color-yellow); /* fill svg for color lemon crush with brand yellow */
+}
+
+.shop main > article:first-of-type ul li:nth-of-type(3) svg {
+  fill: var(--brand-color-lightgray); /* fill svg for color pure white with brand lightgray */
+}
+
+.shop main > article:first-of-type ul li:nth-of-type(4) svg {
+  fill: var(--brand-color-darkblue); /* fill svg for color pacific blue with brand darkblue */
+}
+
+
+
 
 /**********/
 /* FOOTER */
