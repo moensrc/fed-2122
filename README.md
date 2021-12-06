@@ -258,6 +258,9 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 7. JS/CSS Styling scroll positions (css-tricks) https://css-tricks.com/styling-based-on-scroll-position/
 8. JS/CSS Text animeren: voorbeelden (tobiasahlin) https://tobiasahlin.com/moving-letters/
 9. CSS style placeholder text for input (mozilla & codegrepper) https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder & https://www.codegrepper.com/code-examples/html/html+input+suggested+text
-10.
+10. CSS text op 1 lijn (stackoverflow) https://stackoverflow.com/questions/17704539/css-getting-text-in-one-line-rather-than-two
+11. CSS Clip-paths (ishadeed, bennetfeely) https://ishadeed.com/article/clip-path/ & https://bennettfeely.com/clippy/
+12. CSS Blobs (blobmaker, css-tricks)https://www.blobmaker.app/ & https://css-tricks.com/blobs/
+13. CSS SVG fill and strokes (mozilla) https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
 
 </details>
