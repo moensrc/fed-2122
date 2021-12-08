@@ -95,15 +95,15 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- ul li nav
-- getal als span in 1 h3
+- Van nav een ul maken
+- Getal als span in 1 h3
 - h2 van titels vd sections sections
 - h3tjes voor sections in sections
 - articles van sections in sections
 - <a href "#"> doen!
-- p niet nodig bij datetime!
-- summary details goed: vooral doen
-- css clip path maker blob voor hoverimg shop.html - clippath https://bennettfeely.com/clippy/
+- P niet nodig bij datetime!
+- Summary details goed: vooral doen
+- CSS clip path maker blob voor hovering shop.html - clippath https://bennettfeely.com/clippy/ (ik ga het proberen!)
 
 </details>
 
@@ -143,10 +143,10 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Voor de scrollposY kan ik een class toevoegen aan de header (function van scrollPosition).
+- Wanneer ik de functions herschrijf, kan ik ook het iconen probleem oplossen (update: fixed!)
+- Strong ipv Span om h3? Nog even over nadenken.
+
 
 </details>
 
@@ -256,7 +256,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 5. CSS word-break voor ul li h3 (w3schools) https://www.w3schools.com/cssref/css3_pr_word-break.asp
 6. JS scrollTop (stackoverflow, mozilla) https://stackoverflow.com/questions/32068340/change-text-after-scrolling & https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop
 7. JS/CSS Styling scroll positions (css-tricks) https://css-tricks.com/styling-based-on-scroll-position/
-8. JS/CSS Text animeren: voorbeelden (tobiasahlin) https://tobiasahlin.com/moving-letters/
+8. JS/CSS Text animeren: leuke voorbeelden van letter by letter (Tobias Ahlin) https://tobiasahlin.com/moving-letters/
 9. CSS style placeholder text for input (mozilla & codegrepper) https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder & https://www.codegrepper.com/code-examples/html/html+input+suggested+text
 10. CSS text op 1 lijn (stackoverflow) https://stackoverflow.com/questions/17704539/css-getting-text-in-one-line-rather-than-two
 11. CSS Clip-paths (ishadeed, bennetfeely) https://ishadeed.com/article/clip-path/ & https://bennettfeely.com/clippy/
@@ -264,7 +264,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 13. CSS SVG fill and strokes (mozilla) https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
 14. CSS Animations: hoe en wat (mozilla) https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 15. CSS Animations met html made svg's (css-tricks, stackoverflow) https://css-tricks.com/animate-svg-path-changes-in-css/ & https://stackoverflow.com/questions/51614659/how-to-animate-svg-path-d-attribute-with-animate-tag
-16.
-
+16. CSS Media Queries (browserstack) https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints
+17. 
 
 </details>
