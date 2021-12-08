@@ -265,6 +265,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 14. CSS Animations: hoe en wat (mozilla) https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 15. CSS Animations met html made svg's (css-tricks, stackoverflow) https://css-tricks.com/animate-svg-path-changes-in-css/ & https://stackoverflow.com/questions/51614659/how-to-animate-svg-path-d-attribute-with-animate-tag
 16. CSS Media Queries (browserstack) https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints
-17. 
+17. CSS object-fit (digitalocean & mozilla) https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit & https://developer.mozilla.org/en-US/docs/Web/CSS/object-position?retiredLocale=nl
 
 </details>
