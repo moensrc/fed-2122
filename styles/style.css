@@ -1,5 +1,8 @@
-/*CSS Reset http://meyerweb.com/eric/tools/css/reset/ */  
+/**********************/
+/* CSS DOCUMENT RESET */
+/**********************/
 
+/*CSS Reset http://meyerweb.com/eric/tools/css/reset/ */  
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,6 +31,8 @@ time, mark, audio, video {
   margin: 0;
 }
 
+
+
 /*************************/
 /* COLOR PALETTE IN ROOT */
 /*************************/
@@ -38,9 +43,19 @@ time, mark, audio, video {
   --brand-color-teal: RGB(151, 214, 219);
   --brand-color-yellow: RGB(255, 234, 127);
   --brand-color-white: white;
+  --brand-color-black: black;
   --brand-color-lightgray: lightgray;
-  --brand-color-black-overlay: rgba(0, 0, 0, 0.5);
+  --brand-color-overlay: rgba(0, 0, 0, 0.5);
 }
+
+/* color pallette for if user has default dark theme on browser*/
+/* @media (prefers-color-scheme:dark) {
+  :root {
+    
+  }
+} */
+
+
 
 /*************************/
 /* BODY AND GENERAL TEXT */
@@ -79,6 +94,8 @@ p {
   padding-bottom: 1em;
 }
 
+
+
 /****************/
 /* HEADER + NAV */
 /****************/
@@ -97,7 +114,7 @@ header {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 0 0 48em var(--brand-color-black-overlay);
+  box-shadow: inset 0 0 48em var(--brand-color-overlay);
 }
 
 header nav {
@@ -139,11 +156,16 @@ header nav ul li a {
   opacity: 0.6;
 }
 
-header nav ul li a:active, a:after {
+header nav ul li a:active,
+header nav ul li a:hover, 
+header nav ul li a:focus {
   opacity: 1;
   text-decoration: underline;
+  text-decoration-thickness: .1em;
   text-decoration-style: solid;
   text-decoration-color: var(--brand-color-yellow);
+
+  outline: none;
 }
 
 header section:first-of-type {
@@ -160,37 +182,43 @@ header section:first-of-type {
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: .1em solid var(--brand-color-white);
-}
-
-header section:first-of-type.scrollHeader {
   background-color: var(--brand-color-white);
   border-bottom: .1em solid var(--brand-color-lightgray);
 }
 
-header section:first-of-type > img {
+header section:first-of-type.scrollHeader {
+  background-color: transparent;
+  border-bottom: .1em solid var(--brand-color-white);
+}
+
+header section:first-of-type > img { /*Dopper logo*/
   height:1.5em;
   width: auto;
 }
 
-header section:first-of-type a img {
+header section:first-of-type button {
+  border: none;
+  background-color: transparent;
+}
+
+header section:first-of-type button img {
   width: 2.5em;
   height: 2.5em;
   
   padding: .5em;
 
-  background-color: var(--brand-color-white);
+  background-color: var(--brand-color-darkblue);
 
   border-radius: 2em;
 }
 
-header section:first-of-type a img.exitMenu {
+header section:first-of-type button img.exitMenu {
   background-color: var(--brand-color-darkblue);
 }
 
 
-header section:first-of-type a img.scrollHeader {
-  background-color: var(--brand-color-darkblue);
+header section:first-of-type button img.scrollHeader {
+  background-color: var(--brand-color-white);
 }
 
 header section:nth-of-type(2) {
@@ -215,6 +243,157 @@ header section:nth-of-type(2) a {
 
   border-radius: 2em;
 }
+
+header section:nth-of-type(2) a:hover,
+header section:nth-of-type(2) a:focus {
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-white);
+  transition: .5s ease-in-out;
+}
+
+header section:nth-of-type(2) a:active {
+  box-shadow: .25em .25em .5em var(--brand-color-darkblue);
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+  padding: 2em;
+}
+
+/* details + summary with custom styling */
+footer details summary {
+  cursor: pointer; /* add pointer cursor, because it's an interaction element */
+
+  padding: .5em;
+  margin: -.1em;
+
+  list-style-type: "+ "; /* sets custom list style to '+' */
+  color: var(--brand-color-lightgray);
+  border-top: .1em solid var(--brand-color-lightgray);
+  border-bottom: .1em solid var(--brand-color-lightgray);
+}
+
+footer details summary:hover,
+footer details summary:focus {
+  color: var(--brand-color-darkblue);
+}
+
+footer details[open] summary {
+  list-style-type: "- "; /* changes list style, when details is open */
+}
+
+footer details[open] summary ~ * { /* select all items in summary */
+  animation: openSummary .5s ease-in-out;
+}
+
+@keyframes openSummary { /* animation fades in details from the left */
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+footer details ul li a {
+  color: var(--brand-color-darkblue);
+  font-weight: 500;
+}
+
+footer details ul li a:hover,
+footer details ul li a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: .2em;
+  text-decoration-color: var(--brand-color-yellow);
+}
+
+footer ul:first-of-type { 
+  list-style: none;
+  padding-left: 1em;
+}
+
+footer ul:first-of-type li {
+  color: var(--brand-color-darkblue);
+}
+
+footer ul:first-of-type li a {
+  text-decoration: none;
+}
+
+/* social media links */
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2em;
+}
+
+footer section ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+footer section ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: .25em;
+  margin: .25em;
+  background-color: var(--brand-color-yellow);
+  border-radius: 2em;
+}
+
+footer section ul li a:hover,
+footer section ul li a:focus {
+  background-color: var(--brand-color-teal);
+  transform: scale(1.2);
+}
+
+footer section ul li a:active {
+  box-shadow: .05em .05em .1em var(--brand-color-black);
+}
+
+/* extra links (terms & conditions, privacy policy & return policy) */
+footer > ul {
+  margin-top: 2em;
+  list-style: none;
+}
+
+footer > ul li a {
+  text-decoration: none;
+  line-height: 2;
+
+  color: var(--brand-color-lightgray);
+  text-transform: uppercase;
+}
+
+footer > ul li a:hover,
+footer > ul li a:focus {
+  color: var(--brand-color-teal);
+}
+
+/* copyright text */
+footer p {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+
+
+
 /**********************************************************/
 /*                      HOME PAGE                         */
 /**********************************************************/
@@ -223,7 +402,7 @@ header section:nth-of-type(2) a {
 /* MAIN HOME*/
 /************/
 
-main a, button {
+main a, main form button {
   font-family: 'Poppins', sans-serif;
   font-size: 0.8em;
   text-decoration: none;
@@ -238,6 +417,22 @@ main a, button {
 
   border-radius: 2em;
 }
+
+main a:hover, 
+main a:focus {
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-white);
+  transition: .5s ease-in-out;
+}
+
+main a:active {
+  box-shadow: .25em .25em .5em var(--brand-color-darkblue);
+}
+
+
 
 /***************/
 /* INFO DOPPER */
@@ -278,6 +473,8 @@ main > ul li h3 span {
   padding-right: 1em;
 }
 
+
+
 /*****************/
 /* MAIN SECTIONS */
 /*****************/
@@ -306,9 +503,6 @@ main section:first-of-type img {
   width: 80vw;
   /* puts image first in flex-order */
   order: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 main section:first-of-type a {
@@ -422,19 +616,19 @@ main section:nth-of-type(4) p {
 main section:nth-of-type(4) ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   list-style: none;
 }
 
 main section:nth-of-type(4) ul li {
-  width: fit-content;
-  max-width: 20em;
+  width: 80vw;
 
   display: flex;
   flex-direction: column;
-  margin: 0 1em 2em 1em;
+  margin: 1em 1em 2em 1em;
 }
 
 main section:nth-of-type(4) ul li h3 {
@@ -444,7 +638,7 @@ main section:nth-of-type(4) ul li h3 {
 }
 
 main section:nth-of-type(4) ul li img {
-  width: 18em;
+  width: 80vw;
   height: auto;
   padding: 0;
 
@@ -453,6 +647,18 @@ main section:nth-of-type(4) ul li img {
 
 main section:nth-of-type(4) ul li time {
   order: 2; /*puts time underneath img and above h3*/
+}
+
+main section:nth-of-type(4) > a:hover,
+main section:nth-of-type(4) > a:focus,
+main section:nth-of-type(5) a:hover,
+main section:nth-of-type(5) a:focus {
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-teal);
+  transition: .5s ease-in-out;
 }
 
 main section:nth-of-type(5) {
@@ -473,7 +679,7 @@ main section:nth-of-type(6) {
   background-image: url("../images/dopper-brand-movie.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 400%;
+  background-size: 400%; 
   padding: 10em 0em 10em 0em;
 }
 
@@ -513,23 +719,27 @@ main section:nth-of-type(7) form {
   justify-content: center;
 }
 
-main section:nth-of-type(7) form input[type=email] {
+main section:nth-of-type(7) form input[type=email] { /*the email input*/
   width: 95%;
   height: 2em;
 
   font-family: 'Poppins', sans-serif;
+  color: var(--brand-color-darkblue); /*text that is typed in input, will be darkblue and bold*/
+  font-weight: 700;
 
   border: none;
   border-bottom: .1em solid var(--brand-color-lightgray);
   background-color: var(--brand-color-lightblue);
 }
 
-main section:nth-of-type(7) form input[type=email]::placeholder {
+main section:nth-of-type(7) form input[type=email]::placeholder { /*style just the placeholder*/
   font-family: 'Poppins', sans-serif;
   font-size: 1.2em;
   font-weight: 600;
-  color: var(--brand-color-lightgray);
+  color: var(--brand-color-lightgray); 
 }
+
+
 
 /**********************************************************/
 /*                          SHOP PAGE                     */
@@ -539,8 +749,10 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
 /* MAIN SHOP*/
 /************/
 .shop main {
-  color: var(--brand-color-darkblue);
+  color: var(--brand-color-darkblue); /*text color is darkblue standard*/
 }
+
+
 
 /**********************/
 /* MAIN SHOP SECTIONS */
@@ -549,7 +761,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
 .shop main section:first-of-type {
   background-color: var(--brand-color-white);
   margin: 3em 0 0 0;
-  padding: 1em 1em 0 1em;
+  padding: 0 1em 0 1em;
 }
 
 .shop main section:first-of-type ul {
@@ -576,6 +788,10 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   color: var(--brand-color-lightgray);
   background-color: initial;
   border-radius: 0;
+}
+
+.shop main section:first-of-type ul li a:active {
+  box-shadow: none;
 }
 
 .shop main section:nth-of-type(2) {
@@ -648,8 +864,6 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   color: var(--brand-color-darkblue);
 }
 
-
-
 .shop main > ul {
   display: flex;
   flex-direction: row;
@@ -680,10 +894,19 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   border-radius: 0;
 }
 
+.shop main >  ul li a:active,
+.shop main >  ul li a:focus { 
+  box-shadow: none;
+
+  color: var(--brand-color-teal);
+  font-weight: 600;
+  transform: scale(1.2);
+}
+
 .shop main > article:first-of-type {
   display: flex;
   flex-direction: column;
-  flex-direction: center;
+  justify-content: center;
   align-items: center;
 
   margin-top: 2.5em;
@@ -705,7 +928,8 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   justify-content: center;
   align-items: center;
 
-  position: relative; /*position relative so we can place the svg inside the li container*/
+  /*position relative so we can place the svg inside the li container*/
+  position: relative;
 
   text-align: center;
 
@@ -723,9 +947,24 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   font-weight: 700;
 }
 
-.shop main > article:first-of-type ul li img {
-  order: -2;
+.shop main > article:first-of-type ul li a {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+
+  order: -2; /* position img/a above title and price of the product */
+}
+
+.shop main > article:first-of-type ul li a:active,
+.shop main > article:first-of-type ul li a:focus{
+  box-shadow: none;
+}
+
+.shop main > article:first-of-type ul li img {
   width: 10em;
   height: auto;
 }
@@ -734,122 +973,261 @@ main section:nth-of-type(7) form input[type=email]::placeholder {
   width: 15em;
   padding: .4em;
 
-  z-index: -1;
+  z-index: -1; /* position svg behind the photo of the dopper bottle */
   position: absolute;
-  top: 0;
-  bottom: 0;
+  bottom: 5em;
 
   opacity: 0;
 }
 
+/* styles for SVG's on shop page */
 .shop main > article:first-of-type ul li:hover svg,
-.shop main > article:first-of-type ul li:active svg,
-.shop main > article:first-of-type ul li:focus svg {
-  transition: .4s ease-in-out;
-  opacity: 0.7;
+.shop main > article:first-of-type ul li a:active svg,
+.shop main > article:first-of-type ul li a:focus svg {
+  animation-name: blob-easeIn, blob-changingBlob;
+  animation-duration: 20s, 10s;
+  animation-iteration-count: 1, infinite;
 }
 
 .shop main > article:first-of-type ul li:first-of-type svg,
 .shop main > article:first-of-type ul li:nth-of-type(2) svg { 
-  fill: var(--brand-color-yellow); /* fill svg for color lemon crush with brand yellow */
+  fill: var(--brand-color-yellow); /* fill svg for dopper color lemon crush with brand yellow */
 }
 
 .shop main > article:first-of-type ul li:nth-of-type(3) svg {
-  fill: var(--brand-color-lightgray); /* fill svg for color pure white with brand lightgray */
+  fill: var(--brand-color-lightgray); /* fill svg for dopper color pure white with brand lightgray */
 }
 
 .shop main > article:first-of-type ul li:nth-of-type(4) svg {
-  fill: var(--brand-color-darkblue); /* fill svg for color pacific blue with brand darkblue */
+  fill: var(--brand-color-darkblue); /* fill svg for dopper color pacific blue with brand darkblue */
 }
 
+/************************/
+/* ANIMATIONS BLOB SHOP */
+/************************/
 
-
-
-/**********/
-/* FOOTER */
-/**********/
-
-footer {
-  padding: 2em;
+@keyframes blob-easeIn { /* animate ease-in and ease-out blob when hovering */
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-/* details + summary with custom styling */
-footer details summary {
-  cursor: pointer; /* add pointer cursor, because it's an interaction element */
-
-  padding: .5em;
-  margin: -.1em;
-
-  list-style-type: "+ "; /* sets custom list style to '+' */
-  color: var(--brand-color-lightgray);
-  border-top: .1em solid var(--brand-color-lightgray);
-  border-bottom: .1em solid var(--brand-color-lightgray);
+@keyframes blob-changingBlob { /* animate blob while its being hovered or active */
+  0% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+  30% {
+    transform: scale(0.95) translateX(2%) translateY(2%);
+  }
+  60% {
+    transform: scale(1.02) translateX(2%) translateY(3%);
+  }
+  100% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
 }
 
-footer details[open] summary {
-  list-style-type: "- "; /* changes list style, when details is open*/
-}
+/**********************************************************/
+/*                    MEDIA QUERIES                       */
+/**********************************************************/
 
-footer ul:first-of-type { 
-  list-style: none;
-  padding-left: 1em;
-}
+/* from breakpoint: tablet format (min-width = 768px) */
+@media only screen and (min-width: 768px) {
 
-footer ul:first-of-type li {
-  color: var(--brand-color-darkblue);
-}
+  /****************/
+  /* HEADER + NAV */
+  /****************/
 
-footer ul:first-of-type li a {
-  text-decoration: none;
-}
+  header {
+    background-size: 150%;
+    box-shadow: inset 0 0 64em var(--brand-color-black);
+  }
 
-/* social media links */
-footer section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  header section:first-of-type button {
+    opacity: 0;
+  }
 
-  margin-top: 2em;
-}
+  header nav ul {
+    display: flex;
+    flex-direction: row;
 
-footer section ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+    white-space: nowrap;
 
-  text-decoration: none;
-  list-style: none;
-}
+    padding: 0;
 
-footer section ul li {
-  padding: .25em;
-  margin: .25em;
-  background-color: var(--brand-color-yellow);
-  border-radius: 2em;
-}
+    position: fixed;
+    left: calc(50% / 2);
+    top: initial;
+    bottom: initial;
+    right: initial;
+    z-index: 10;
+    margin-top: 1em;
 
-footer section ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    list-style: none;
+    background-color: transparent;
 
-/* extra links (terms & conditions, privacy policy & return policy) */
-footer > ul {
-  margin-top: 2em;
-  list-style: none;
-}
+    line-height: 1;
 
-footer > ul li a {
-  text-decoration: none;
-  line-height: 2;
+    transform: translateX(0%);
+  }
 
-  color: var(--brand-color-lightgray);
-  text-transform: uppercase;
-}
+  header nav ul li:first-of-type { /* 'Join our wave' is placed most right */
+    order: 5; 
+  }
 
-/* copyright p */
-footer p {
-  margin-top: 2em;
-}
+  header nav ul li a {
+    font-size: .8em;
+    padding: 0 .5em;
+  }
+
+  header section:nth-of-type(2) {
+    margin: 10em 0; /* creates space so background-image can be larger in height */
+  }
+
+    
+
+  /**********/
+  /* FOOTER */
+  /**********/
+
+  /* no code (yet!) */
+
+
+  /*************/
+  /* MAIN HOME */
+  /*************/
+
+  /* Info dopper list */
+  main > ul {
+    padding: 5em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main > ul li {
+    padding: 0 3em 0 0;
+    max-width: 25em;
+  }
+
+  main section:first-of-type img,
+  main section:nth-of-type(2) img {
+    width: 20em;
+
+    float: right;
+
+  }
+
+  main section:nth-of-type(3) {
+    padding-bottom: 0;
+  }
+
+  main section:nth-of-type(3) article {
+    width: 50vw;
+  }
+
+  main section:nth-of-type(3) article:first-of-type {
+    right: -1.5em;
+  }
+
+  main section:nth-of-type(3) article:first-of-type img,
+  main section:nth-of-type(3) article:nth-of-type(2) img {
+    width: 50vw;
+    height: 10em;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  main section:nth-of-type(3) article:nth-of-type(2) {
+    top: -5em;
+    left: 18em;
+    overflow-x: hidden;
+  }
+
+  main section:nth-of-type(4) ul li {
+    width: 35vw;
+  }
+
+  main section:nth-of-type(4) ul li img {
+    width: 35vw;
+    height: 12em;
+    object-fit: cover;
+  }
+
+  main section:nth-of-type(6) {
+    background-size: 200%
+  }
+
+  /*************/
+  /* MAIN SHOP */
+  /*************/
+
+  .shop main section:first-of-type ul {
+    overflow-x: initial;
+    padding: 1em 0;
+  }
+
+  .shop main section:nth-of-type(2) { 
+    flex-direction: row;
+
+    padding-top: 0;
+  }
+
+  .shop main section:nth-of-type(2) article:first-of-type {
+    position: relative;
+    right: 6em;
+    top: 0;
+
+    width: 35em;
+  }
+
+  .shop main section:nth-of-type(2) article:first-of-type img {
+    width: 35em;
+    height: 15em;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .shop main section:nth-of-type(2) article:nth-of-type(2) {
+    position: absolute;
+    left: 60%;
+    top: 3.5em;
+    width: 20em;
+  }
+
+  .shop main section:nth-of-type(2) article:nth-of-type(2) img {
+    width: 20em;
+    height: 10em;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .shop main > ul {
+    padding-bottom: 1em;
+  }
+
+  .shop main > ul li,
+  .shop main > ul li a {
+    padding: 0;
+    margin: .5em;
+  }
+  
+
+  .shop main > article:first-of-type ul li img {
+    width: 20em;
+  }
+  
+  .shop main > article:first-of-type ul li svg {
+    width: 25em;
+  }
+}  
 
