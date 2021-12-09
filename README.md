@@ -182,7 +182,7 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 Wanneer alleen de screenreader wordt gebruikt, wordt het hamburgermenu niet geopend, maar worden wel de list items hierin voorgelezen. Hetzelfde geldt als je enkel tabt door de site. De nav elementen worden geselecteerd maar zijn niet zichtbaar.
 
 Oplossing <br>
- 
+Dit is dus op zichzelf niet een heel groot probleem. Mensen die rekenen op de screen-reader hebben de visuele ondersteuning niet. Hierdoor is de relevantie van dit inzicht niet noodzakelijk. Ik heb wel de hamburger-button een display: none; gegeven ipv een visibility: hidden;, zodat hij niet meer op tablet/laptop modus geselecteerd kan worden door de tab-toets.
 
 #### Niet alle selecteerbare elementen hebben nog een focus, hover en active state. 
 De a over de video, de sign up button en de links in de eerste section van shop.html hebben nog geen focus, hover en active state.
@@ -205,8 +205,6 @@ Oplossing <br>
 Color aanpassen zodat het opvallender is en het contrast hoger is..
  
 </details>
-
-
 
 
 
