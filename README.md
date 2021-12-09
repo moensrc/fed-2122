@@ -164,9 +164,9 @@ Lijst met je bevindingen die in de test naar voren kwamen:
  <strong>Keyboard en screenreader</strong>
  - Mobile: screenreader en tab knop lezen/selecteren alle nav a items, het menu wordt niet opengevouwen.
  - Button video, Sign up button en eerste sections a's moeten nog een :focus, :hover & :active styling
+ 
  <strong>Brillen</strong>
  - Blur/glare:
-    - Contrast is okay
     - Nieuwsartikelen de titels zijn te dik
     - Placeholder niet goed leesbaar
     - Lichtgrijze tekst in footer niet goed leesbaar
@@ -175,29 +175,35 @@ Lijst met je bevindingen die in de test naar voren kwamen:
  - Color:
     - Kleuren zijn herkenbaar en verschillen genoeg van elkaar. Contrast is goed.
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+<strong>Ballonnen</strong>
+- 
+ 
+#### Screenreader leest nav, maar vouwt niet uit.
+Wanneer alleen de screenreader wordt gebruikt, wordt het hamburgermenu niet geopend, maar worden wel de list items hierin voorgelezen. Hetzelfde geldt als je enkel tabt door de site. De nav elementen worden geselecteerd maar zijn niet zichtbaar.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplossing <br>
+ 
 
+#### Niet alle selecteerbare elementen hebben nog een focus, hover en active state. 
+De a over de video, de sign up button en de links in de eerste section van shop.html hebben nog geen focus, hover en active state.
 
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplossing <br>
+Ik ga states toevoegen aan deze 3 elementen, zodat de toegankelijkheid groter is. Ook moet ik nog iets fixen betreft de focus state van de Dopper images op de shop page.
 
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Titels van de nieuwsartikelen zijn niet goed leesbaar. 
+Wanneer de gebruiker slecht zicht heeft (blur/glare bril), zijn de titels van de nieuwsartikelen niet duidelijk leesbaar. De font-weight is te dik. 
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplossing <br>
+Font-weight aanpassen zodat het dunner is.
 
+
+#### Lichtgrijze placeholder van input en links in footer niet goed leesbaar. 
+Wanneer de gebruiker slecht zicht heeft (blur/glare bril), zijn de licht-grijze teksten niet goed zichtbaar.
+
+Oplossing <br>
+Color aanpassen zodat het opvallender is en het contrast hoger is..
+ 
 </details>
 
 
