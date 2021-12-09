@@ -161,6 +161,19 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
+ <strong>Keyboard en screenreader</strong>
+ - Mobile: screenreader en tab knop lezen/selecteren alle nav a items, het menu wordt niet opengevouwen.
+ - Button video, Sign up button en eerste sections a's moeten nog een :focus, :hover & :active styling
+ <strong>Brillen</strong>
+ - Blur/glare:
+    - Contrast is okay
+    - Nieuwsartikelen de titels zijn te dik
+    - Placeholder niet goed leesbaar
+    - Lichtgrijze tekst in footer niet goed leesbaar
+ - Heimfield Loss:
+    - Geen inzichten/bevindingen
+ - Color:
+    - Kleuren zijn herkenbaar en verschillen genoeg van elkaar. Contrast is goed.
 
 #### Titel eerste bevinding
 Hier korte omschrijving (met indien nodig een afbeelding)
