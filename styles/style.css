@@ -1065,7 +1065,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     padding: 0;
 
     position: fixed;
-    left: calc(50% / 2);
+    left: calc(55% / 2);
     top: initial;
     bottom: initial;
     right: initial;
@@ -1230,4 +1230,53 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     width: 25em;
   }
 }  
+
+/* from breakpoint: laptop format (min-width = 1024px) */
+@media only screen and (min-width: 1024px) {
+  /****************/
+  /* HEADER + NAV */
+  /****************/
+  header {
+    background-size: 100%;
+  }
+
+
+  /**********/
+  /* FOOTER */
+  /**********/
+
+   /* no code (yet!) */
+
+  /*************/
+  /* MAIN HOME */
+  /*************/
+
+  main > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main section:nth-of-type(3) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main section:nth-of-type(3) article:nth-of-type(2) {
+    left: 0;
+    top: 2em;
+  }
+
+  main section:nth-of-type(3) article:first-of-type img,
+  main section:nth-of-type(3) article:nth-of-type(2) img {
+    height: 15em;
+  }
+
+  main section:nth-of-type(6) {
+    background-size: 100%
+  }
+
+  main section:nth-of-type(6) h2 {
+    top: 3em;
+  }
+  
+}
 
