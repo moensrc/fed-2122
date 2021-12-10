@@ -220,11 +220,11 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| Rosella Moens      | Hong Zhou          | student 3    | student 4        |
+| Rosella Moens      | Hong Zhou          | Ilias Ouyaliz   | Stefan Radouane      |
 | ---            | ---                | ---          | ---              |
-| JS animation  |Met media queries img src aanpassen        | en ik dit    | en dan ik dat    |
-| Darkmode colors in root | 9 images toevoegen met 1 button | nog een punt | dit wil ik zeker |
-| Footer flexen?     | hamburger menu animatie      | ...          | ...              |
+| JS animation  | Met media queries img src aanpassen  | Flexbox en css grid | Accordion maken |
+| Darkmode colors in root | 9 images toevoegen met 1 button | Logo in midden | SVG stroke uitlijnen naar binnen |
+| Footer flexen? | hamburger menu animatie  | Images width   | Pagina's overeenkomen?  |
 
 
 ### Verslag van meeting
