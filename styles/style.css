@@ -48,7 +48,7 @@ time, mark, audio, video {
   --brand-color-overlay: rgba(0, 0, 0, 0.5);
 }
 
-/* color pallette for if user has default dark theme on browser*/
+/* color pallette for if user has default dark theme set on browser */
 /* @media (prefers-color-scheme:dark) {
   :root {
     
@@ -62,7 +62,7 @@ time, mark, audio, video {
 /*************************/
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* font-family of all text */
 }
 
 h1 {
@@ -100,7 +100,7 @@ p {
 /* HEADER + NAV */
 /****************/
 
-header {
+header { /* the whole header, including topbar, nav and banner */
   position: relative;
   width: 100%;
   height: auto;
@@ -114,14 +114,13 @@ header {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 0 0 48em var(--brand-color-overlay);
+  box-shadow: inset 0 0 48em var(--brand-color-overlay); /* use of a box-shadow so image will have black/transparent overlay */
 }
 
 header nav {
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
-
+  flex-direction: column;  /* flex nav items underneath eachother */
 }
 
 header nav ul {
@@ -133,24 +132,23 @@ header nav ul {
   bottom: 0;
   right: 0;
 
-  list-style: none;
+  list-style: none; /* deletes ::marker */
   background-color: var(--brand-color-white);
 
   line-height: 2.5;
 
-  /* places the nav ul above all content, but below the heading*/
-  z-index: 4;
-  transform: translateX(100%);
-  transition: 0.5s;
+  z-index: 4; /* places the nav ul above all content, but below the heading */
+  transform: translateX(100%); /* moves nav 100% to the right (out of viewport) */
+  transition: 0.5s; /* transition for showMenu */
 }
 
 
 header nav ul.showMenu {
-  transform: translateX(0%);
+  transform: translateX(0%); /* moves nav back to the original place (fills whole viewport) */
 }
 
 header nav ul li a {
-  text-decoration: none;
+  text-decoration: none; /* removes standard underline style */
   color: var(--brand-color-darkblue);
   font-size: 1.75em;
   font-weight: 700;
@@ -160,27 +158,27 @@ header nav ul li a {
 
 header nav ul li a:active,
 header nav ul li a:hover, 
-header nav ul li a:focus {
+header nav ul li a:focus { /* sets styles for hover on a's in nav*/
   opacity: 1;
   text-decoration: underline;
   text-decoration-thickness: .1em;
   text-decoration-style: solid;
   text-decoration-color: var(--brand-color-yellow);
 
-  outline: none;
+  outline: none; /* deletes 'outline' setting of focus pseudoclass */
 }
 
 header section:first-of-type {
   width: 100vw;
-  position: fixed;
+  position: fixed; /* make topbar in header fixed */
   top: 0;
 
-  z-index: 5; /* fixed header should always be on front of other content */
+  z-index: 5; /* fixed topbar should always be on front of all other content */
 
   padding: .5em 1.5em .5em 1.5em;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* sets logo and hamburger button in row */
   justify-content: space-between;
   align-items: center;
 
@@ -189,19 +187,25 @@ header section:first-of-type {
   
 }
 
-header section:first-of-type.scrollHeader {
+header section:first-of-type.scrollHeader { /* when scrolling, add .scrollHeader class (see JS) */
   background-color: var(--brand-color-white);
   border-bottom: .1em solid var(--brand-color-lightgray);
 }
 
 header section:first-of-type > img { /* Dopper logo */
-  height:1.5em;
+  height: 1.5em;
   width: auto;
 }
 
-header section:first-of-type button {
-  border: none;
-  background-color: transparent;
+header section:first-of-type button { /* nav button */
+  border: none; /* reset default styles */
+  background-color: transparent; /* reset default styles */
+}
+
+header section:first-of-type button:hover,
+header section:first-of-type button:focus {
+  transform: scale(1.2);
+  transition: .2s ease-in;
 }
 
 header section:first-of-type button img {
@@ -215,25 +219,25 @@ header section:first-of-type button img {
   border-radius: 2em;
 }
 
-header section:first-of-type button img.exitMenu {
+header section:first-of-type button img.exitMenu { /* when menu is opened, add class exitMenu */
   background-color: var(--brand-color-darkblue);
 }
 
 
-header section:first-of-type button img.scrollHeader {
+header section:first-of-type button img.scrollHeader { /* when user scrolls, add class scrollHeader */
   background-color: var(--brand-color-darkblue);
 }
 
 header section:nth-of-type(2) {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* display text and a underneath eachother */
+  align-items: center; /* & center them */
   justify-content: center;
 
   margin: 4em 2em 3em 2em;
 }
 
-header section:nth-of-type(2) a {
+header section:nth-of-type(2) a { /* link to shop page */
   font-size: 0.8em;
   text-decoration: none;
   font-weight: 500;
@@ -271,7 +275,7 @@ footer {
 
 /* details + summary with custom styling */
 footer details summary {
-  cursor: pointer; /* add pointer cursor, because it's an interaction element */
+  cursor: pointer; /* add pointer cursor because it's an interactive element */
 
   padding: .5em;
   margin: -.1em;
@@ -283,27 +287,27 @@ footer details summary {
 }
 
 footer details summary:hover,
-footer details summary:focus {
+footer details summary:focus { /* hover and focus styling for summary */
   color: var(--brand-color-darkblue);
 }
 
-footer details[open] summary {
-  list-style-type: "- "; /* changes list style, when details is open */
+footer details[open] summary { /* when details is open */
+  list-style-type: "- "; 
 }
 
 footer details[open] summary ~ * { /* select all items in summary */
-  animation: openSummary .5s ease-in-out;
+  animation: openSummary .5s ease-in-out; 
 }
 
 @keyframes openSummary { /* animation fades in details from the left */
   0% {
     opacity: 0;
-    transform: translateX(-5%);
+    transform: translateX(-5%); /* moves items to the left */
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
+    transform: translateX(0); /* moves items back (right) */
+  } 
 }
 
 footer details ul li a {
@@ -312,29 +316,16 @@ footer details ul li a {
 }
 
 footer details ul li a:hover,
-footer details ul li a:focus {
+footer details ul li a:focus { /* hover and focus styling for links in details ul li */
   text-decoration: underline;
   text-decoration-thickness: .2em;
   text-decoration-color: var(--brand-color-yellow);
 }
 
-footer ul:first-of-type { 
-  list-style: none;
-  padding-left: 1em;
-}
-
-footer ul:first-of-type li {
-  color: var(--brand-color-darkblue);
-}
-
-footer ul:first-of-type li a {
-  text-decoration: none;
-}
-
-/* social media links */
+/* section with social media links */
 footer section {
   display: flex;
-  align-items: center;
+  align-items: center; /* center content in section */
   justify-content: center;
 
   margin-top: 2em;
@@ -342,7 +333,7 @@ footer section {
 
 footer section ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* put links in a row */
   justify-content: flex-start;
 
   text-decoration: none;
@@ -351,7 +342,7 @@ footer section ul {
 
 footer section ul li a {
   display: flex;
-  align-items: center;
+  align-items: center; /* center a in img, so background-color is even */
   justify-content: center;
 
   padding: .25em;
@@ -361,12 +352,12 @@ footer section ul li a {
 }
 
 footer section ul li a:hover,
-footer section ul li a:focus {
+footer section ul li a:focus { /* hover and focus states for social media links */
   background-color: var(--brand-color-teal);
   transform: scale(1.2);
 }
 
-footer section ul li a:active {
+footer section ul li a:active { /* active state for social media links */
   box-shadow: .05em .05em .1em var(--brand-color-black);
 }
 
@@ -374,6 +365,7 @@ footer section ul li a:active {
 footer > ul {
   margin-top: 2em;
   list-style: none;
+  padding-left: 1em; 
 }
 
 footer > ul li a {
@@ -385,7 +377,7 @@ footer > ul li a {
 }
 
 footer > ul li a:hover,
-footer > ul li a:focus {
+footer > ul li a:focus { /* hover and focus states for extra links in footer */
   color: var(--brand-color-teal);
 }
 
@@ -405,7 +397,7 @@ footer p {
 /* MAIN HOME*/
 /************/
 
-main a, main form button {
+main a, main form button { /* styles main a & button */
   font-family: 'Poppins', sans-serif;
   font-size: 0.8em;
   text-decoration: none;
@@ -422,7 +414,7 @@ main a, main form button {
 }
 
 main a:hover, 
-main a:focus {
+main a:focus { /* hover and focus state styles for main a */
   padding: 1em 2em;
 
   font-weight: 600;
@@ -461,12 +453,11 @@ main > ul p {
 main > ul li {
   margin-bottom: 3em;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap; /* puts h3, img next to eachother and wraps p down (mobile) */
 }
 
 main > ul li h3 {
-  /* word-break: break-word; */
-  overflow-wrap: break-word;
+  overflow-wrap: break-word; /* breaks h3 up into span and rest of h3 */
   width: 8em;
 }
 
@@ -487,9 +478,10 @@ main section { /* general padding set for all sections */
 }
 
 main section p:last-of-type {
-  padding-bottom: 2em;
+  padding-bottom: 2em; /* add padding to bottom of last p in a section*/
 }
 
+/* first section in main (home page): card 1 */ 
 main section:first-of-type {
   display: flex;
   flex-direction: column;
@@ -513,6 +505,7 @@ main section:first-of-type a {
   margin: 0;
 }
 
+/* second section in main (home page): card 2 */ 
 main section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
@@ -545,7 +538,6 @@ main section:nth-of-type(2) img {
   align-items: center;
 
   /* crops the image asymmetrically: roundness in 4 values */
-  /* border-radius: 12em 8em 10em 8em; */
   border-radius: 80% 54% 74% 54%;
 }
 
@@ -554,12 +546,7 @@ main section:nth-of-type(2) a {
   margin: 0;
 }
 
-main section:nth-of-type(3) {
-  /* position is relative so two child sections can be placed inside it with absolute positions */
-  position: relative;
-
-}
-
+/* third section in main (home page): 2 featured cards in section */ 
 main section:nth-of-type(3) article {
   display: flex;
   flex-direction: column;
@@ -571,17 +558,8 @@ main section:nth-of-type(3) article {
   background-color: var(--brand-color-teal);
 }
 
-main section:nth-of-type(3) article:first-of-type {
-  position: relative;
-  right: 1.5em;
-  overflow-x: hidden;
-}
-
-main section:nth-of-type(3) article:nth-of-type(2) {
-  position: relative;
-  top: -1em;
-  left: 1.25em;
-  overflow-x: hidden;
+main section:nth-of-type(3) article h3 {
+  padding: 1em;
 }
 
 main section:nth-of-type(3) article img {
@@ -590,10 +568,20 @@ main section:nth-of-type(3) article img {
   order: -1;
 }
 
-main section:nth-of-type(3) article h3 {
-  padding: 1em;
+main section:nth-of-type(3) article:first-of-type { /* 1st featured card */ 
+  position: relative;
+  right: 1.5em; /* move left */
+  overflow-x: hidden;
 }
 
+main section:nth-of-type(3) article:nth-of-type(2) { /* 2nd featured card */ 
+  position: relative;
+  top: -1em; /* move up */
+  left: 1.25em; /* move right */
+  overflow-x: hidden;
+}
+
+/* fourth section in main (home page): news 'splash' */ 
 main section:nth-of-type(4) {
   display: flex;
   flex-direction: column;
@@ -617,7 +605,7 @@ main section:nth-of-type(4) p {
   text-align: center;
 }
 
-main section:nth-of-type(4) ul {
+main section:nth-of-type(4) ul { /* unordered list of news articles */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -627,11 +615,11 @@ main section:nth-of-type(4) ul {
   list-style: none;
 }
 
-main section:nth-of-type(4) ul li {
+main section:nth-of-type(4) ul li { 
   width: 80vw;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* flex elements as column: li holds h3, img and time */
   margin: 1em 1em 2em 1em;
 }
 
@@ -653,10 +641,10 @@ main section:nth-of-type(4) ul li time {
   order: 2; /*puts time underneath img and above h3*/
 }
 
-main section:nth-of-type(4) > a:hover,
-main section:nth-of-type(4) > a:focus,
+main section:nth-of-type(4) a:hover,
+main section:nth-of-type(4) a:focus,
 main section:nth-of-type(5) a:hover,
-main section:nth-of-type(5) a:focus {
+main section:nth-of-type(5) a:focus { /* hover and focus states for the buttons in sections 4 & 5 */
   padding: 1em 2em;
 
   font-weight: 600;
@@ -665,6 +653,7 @@ main section:nth-of-type(5) a:focus {
   transition: .5s ease-in-out;
 }
 
+/* fifth section in main (home page): 'geinteresseerd in onze flessen?' */ 
 main section:nth-of-type(5) {
   display: flex;
   flex-direction: column;
@@ -674,6 +663,7 @@ main section:nth-of-type(5) {
   background-color: var(--brand-color-lightblue);
 }
 
+/* sixth section in main (home page): video banner */ 
 main section:nth-of-type(6) {
   display: flex;
   justify-content: center;
@@ -688,7 +678,7 @@ main section:nth-of-type(6) {
 }
 
 main section:nth-of-type(6) h2 {
-  position: relative;
+  position: relative; /* use position relative to place h2 bottom right of the section */ 
   top: 4.25em;
   right: 1.5em;
   order: 2;
@@ -699,12 +689,12 @@ main section:nth-of-type(6) h2 {
   color: var(--brand-color-white);
 }
 
-main section:nth-of-type(6) a {
+main section:nth-of-type(6) a { /* link is a blob with a play icon (main section:nth-of-type(6) a img) */ 
   background-color: var(--brand-color-white);
   padding: 2.8em 2.8em 2.8em 3em;
   border-radius: 10em 8em 11em 8em;
 
-  transition: .3s ease-in;
+  transition: .3s ease-in; /* transition for hover & focus states */
 }
 
 main section:nth-of-type(6) a:hover,
@@ -719,34 +709,36 @@ main section:nth-of-type(6) a img {
   height: auto;
 }
 
+/* seventh section in main (home page): newsletter signup */ 
 main section:nth-of-type(7) {
   padding-top: 2em;
 
   background-color: var(--brand-color-lightblue);
 }
 
-main section:nth-of-type(7) form {
+main section:nth-of-type(7) form { 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* place form elements (input & button) underneath eachother with flex */
   align-items: center;
   justify-content: center;
 }
 
-main section:nth-of-type(7) form input[type=email] { /*the email input*/
+main section:nth-of-type(7) form input[type=email] { /* email input */
   width: 95%;
   height: 2em;
 
-  font-family: 'Poppins', sans-serif;
-  color: var(--brand-color-darkblue); /*text that is typed in input, will be darkblue and bold*/
+  font-family: 'Poppins', sans-serif; /* set font: delete default styling */
+  font-size: 1.2em;
   font-weight: 700;
+  color: var(--brand-color-darkblue); /* text that is typed in input, will be darkblue and bold */
 
   border: none;
   border-bottom: .1em solid var(--brand-color-lightgray);
   background-color: var(--brand-color-lightblue);
 }
 
-main section:nth-of-type(7) form input[type=email]::placeholder { /*style just the placeholder*/
-  font-family: 'Poppins', sans-serif;
+main section:nth-of-type(7) form input[type=email]::placeholder { /* style just the placeholder */
+  font-family: 'Poppins', sans-serif; /* set font: delete default styling */
   font-size: 1.2em;
   font-weight: 600;
   color: var(--brand-color-lightgray); 
@@ -761,12 +753,13 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 /************************/
 /* HEADER CUSTOM STYLES */
 /************************/
+/* topbar */
 .shop header section:first-of-type {
   background-color: var(--brand-color-white);
   border-bottom: .1em solid var(--brand-color-lightgray);
 }
 
-.shop header section:first-of-type button img {
+.shop header section:first-of-type button img { /* hamburger menu icon */
   background-color: var(--brand-color-darkblue);
 }
 
@@ -781,7 +774,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 /* MAIN SHOP*/
 /************/
 .shop main {
-  color: var(--brand-color-darkblue); /*text color is darkblue standard*/
+  color: var(--brand-color-darkblue); /* text color is standard darkblue */
 }
 
 
@@ -790,6 +783,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 /* MAIN SHOP SECTIONS */
 /**********************/
 
+/* first section in main (shop page): links to products */ 
 .shop main section:first-of-type {
   background-color: var(--brand-color-white);
   margin: 3em 0 0 0;
@@ -810,42 +804,37 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 }
 
 .shop main section:first-of-type ul li a {
-  /* width:fit-content; */
   padding: 0;
   margin: 0;
 
   font-weight: 600;
-  text-transform: initial;
+  text-transform: initial; /* text is default, instead of uppercase */
 
   color: var(--brand-color-lightgray);
-  background-color: initial;
+  background-color: initial; /* reset background-color to standard white */
   border-radius: 0;
 }
 
 .shop main section:first-of-type ul li a:active,
 .shop main section:first-of-type ul li a:hover,
-.shop main section:first-of-type ul li a:focus {
-  box-shadow: none;
+.shop main section:first-of-type ul li a:focus { /* active, hover & focus states for links to products */
+  box-shadow: none; /* reset box-shadow that's on the a's on the main */
   color: var(--brand-color-darkblue);
   transform: scale(1.1);
 }
 
 .shop main section:nth-of-type(2) {
-  /* position is relative so two child sections can be placed inside it with absolute positions */
-  position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   
-
   background-color: var(--brand-color-white);
 }
 
 .shop main section:nth-of-type(2) article {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: flex-start;
   justify-content: flex-start;
 
@@ -856,7 +845,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 
 .shop main section:nth-of-type(2) article img {
   width: 100%;
-  order: -2; /* places image before h3 + a */
+  order: -2; /* places image in flow before h3 & a */
   margin-bottom: 0;
 
   border-radius: 0;
@@ -875,38 +864,39 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   margin-left: 1em;
 }
 
-.shop main section:nth-of-type(2) article:first-of-type {
+.shop main section:nth-of-type(2) article:first-of-type { /* first featured card */
   position: relative;
-
+  /* not moved, so it's centered (mobile) */
   background-color: var(--brand-color-yellow);
 }
 
 .shop main section:nth-of-type(2) article:first-of-type a {
-  background-color: var(--brand-color-darkblue);
+  background-color: var(--brand-color-darkblue); /* different colors for contrast */
   color: var(--brand-color-white);
 }
 
-.shop main section:nth-of-type(2) article:nth-of-type(2) {
+.shop main section:nth-of-type(2) article:nth-of-type(2) { /* second featured card */
   position: relative;
-  top: -1.2em;
-  left: 1em;
+  top: -1.2em; /* move up */
+  left: 1em; /* move right */
   overflow-x: hidden;
 
   background-color: var(--brand-color-teal);
 }
 
 .shop main section:nth-of-type(2) article:nth-of-type(2) a {
-  background-color: var(--brand-color-white);
+  background-color: var(--brand-color-white); /* different colors for contrast */
   color: var(--brand-color-darkblue);
 }
 
-.shop main > ul {
-  display: flex;
+/* ul with links */
+.shop main > ul { /* selector for direct ul child of parent main on shop page*/
+  display: flex; 
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  background-color: initial;
+  background-color: initial; /* resets background-color to default white */
   padding-top: 0;
 }
 
@@ -931,20 +921,21 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 }
 
 .shop main >  ul li a:active,
-.shop main >  ul li a:focus { 
-  box-shadow: none;
+.shop main >  ul li a:focus { /* active & focus states for links */
+  box-shadow: none; /* reset box-shadow from main a:focus/active */
 
   color: var(--brand-color-teal);
   font-weight: 600;
   transform: scale(1.2);
 }
 
-.shop main >  ul li a:hover {
+.shop main >  ul li a:hover { /* hover state for links */
   color: var(--brand-color-teal);
   text-decoration: .2em underline;
   text-decoration-color: var(--brand-color-yellow);
 }
 
+/* article 1 product overview on shop page */
 .shop main > article:first-of-type {
   display: flex;
   flex-direction: column;
@@ -1011,7 +1002,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   height: auto;
 }
 
-.shop main > article:first-of-type ul li svg {
+.shop main > article:first-of-type ul li svg { /* blob */
   width: 15em;
   padding: .4em;
 
@@ -1044,10 +1035,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   fill: var(--brand-color-darkblue); /* fill svg for dopper color pacific blue with brand darkblue */
 }
 
-/************************/
-/* ANIMATIONS BLOB SHOP */
-/************************/
-
+/* blob animations */
 @keyframes blob-easeIn { /* animate ease-in and ease-out blob when hovering */
   0% {
     opacity: 0;
@@ -1110,20 +1098,20 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     display: none;
   }
 
-  header nav ul {
+  header nav ul { /* restyle the ul for min-width = 768px and beyond */
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* all li in a row */
 
-    white-space: nowrap;
+    white-space: nowrap; /* don't wrap words, text is on 1 line */
 
     padding: 0;
 
-    position: fixed;
+    position: fixed; /* fix nav to the top */
     left: calc(55% / 2);
     top: initial;
     bottom: initial;
     right: initial;
-    z-index: 10;
+    z-index: 10; /* place above all */
     margin-top: 1em;
 
     list-style: none;
@@ -1131,7 +1119,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 
     line-height: 1;
 
-    transform: translateX(0%);
+    transform: translateX(0%); /* replace in screen */
   }
 
   header nav ul li:first-of-type { /* 'Join our wave' is placed most right */
@@ -1147,7 +1135,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 
   header nav ul li a:active,
   header nav ul li a:hover, 
-  header nav ul li a:focus {
+  header nav ul li a:focus { /* active, hover & focus states for links in nav */
     text-decoration-thickness: .25em;
   }
 
@@ -1156,7 +1144,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   }
 
   header section:nth-of-type(2) {
-    margin: 10em 0; /* creates space so background-image can be larger in height */
+    margin: 10em 0; /* creates space so background-image can be larger */
   }
 
     
@@ -1172,12 +1160,12 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   /* MAIN HOME */
   /*************/
 
-  /* Info dopper list */
+  /* info dopper list */
   main > ul {
     padding: 5em;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* create a 2 column layout with a grid */
   }
 
   main > ul li {
@@ -1189,6 +1177,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     padding: 0;
   }
 
+  /* cards */
   main section:first-of-type,
   main section:nth-of-type(2) {
     flex-direction: row;
@@ -1215,6 +1204,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     padding-right: 2em;
   }
 
+  /* section with 2 featured cards */
   main section:nth-of-type(3) {
     padding-bottom: 0;
   }
@@ -1231,7 +1221,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   main section:nth-of-type(3) article:nth-of-type(2) img {
     width: 50vw;
     height: 10em;
-    object-fit: cover;
+    object-fit: cover; /* use object-fit to fit img inside set width & height */
     object-position: center top;
   }
 
@@ -1241,6 +1231,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     overflow-x: hidden;
   }
 
+  /* news splash with news articles */
   main section:nth-of-type(4) ul li {
     width: 35vw;
   }
@@ -1248,7 +1239,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   main section:nth-of-type(4) ul li img {
     width: 35vw;
     height: 12em;
-    object-fit: cover;
+    object-fit: cover; /* use object-fit to fit img inside set width & height */
   }
 
   main section:nth-of-type(4) h2, 
@@ -1257,23 +1248,26 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     font-size: 3em;
   }
 
+  /* video img banner */
   main section:nth-of-type(6) {
-    background-size: 200%
+    background-size: 200%; /* displays a wider view of the banner img */
   }
 
   main section:nth-of-type(7) form input[type=email] { /*the email input*/
-    width: 30em;
+    width: 30em; /* change width, so it's not getting wider any longer */
   }
 
   /*************/
   /* MAIN SHOP */
   /*************/
 
+  /* list of links of products */
   .shop main section:first-of-type ul {
     overflow-x: initial;
     padding: 1em 0;
   }
 
+  /* section with 2 featured cards (shop) */
   .shop main section:nth-of-type(2) { 
     flex-direction: row;
 
@@ -1282,10 +1276,10 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 
   .shop main section:nth-of-type(2) article:first-of-type {
     position: relative;
-    right: 6em;
-    top: 0;
+    right: 6em; /* move left */
+    top: 0; /* set at top */
 
-    width: 35em;
+    width: 35em; /* set width bigger than article 2 */
   }
 
   .shop main section:nth-of-type(2) article:first-of-type img {
@@ -1297,18 +1291,19 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
 
   .shop main section:nth-of-type(2) article:nth-of-type(2) {
     position: absolute;
-    left: 60%;
-    top: 3.5em;
+    left: 60%; /* move right*/
+    top: 3.5em; /* move down */
     width: 20em;
   }
 
   .shop main section:nth-of-type(2) article:nth-of-type(2) img {
     width: 25em;
     height: 10em;
-    object-fit: cover;
+    object-fit: cover; 
     object-position: center top;
   }
 
+  /* links extra */
   .shop main > ul {
     padding-bottom: 1em;
   }
@@ -1319,7 +1314,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     margin: .5em;
   }
   
-
+  /* product overview */
   .shop main > article:first-of-type ul li img {
     width: 20em;
   }
@@ -1369,10 +1364,12 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   /* MAIN HOME */
   /*************/
 
+  /* list dopper info */
   main > ul {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* card 1 & card 2 */
   main section:first-of-type,
   main section:nth-of-type(2) {
     padding: 2em 7%;
@@ -1383,6 +1380,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     width: 30vw;
   }
 
+  /* section with 2 featured cards */
   main section:nth-of-type(3) {
     display: flex;
     flex-direction: row;
@@ -1398,6 +1396,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
     height: 15em;
   }
 
+  /* news splash */
   main section:nth-of-type(4) {
     padding-bottom: 0;
   }
@@ -1405,9 +1404,10 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   main section:nth-of-type(4) h2, 
   main section:nth-of-type(5) h2,
   main section:nth-of-type(7) h2 {
-  font-size: 4em;
-}
+    font-size: 4em;
+  }
 
+  /* video img banner */
   main section:nth-of-type(6) {
     background-size: 100%
   }
@@ -1420,6 +1420,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /*style just t
   /* MAIN SHOP */
   /*************/
   
+  /* product overview */
   .shop main > article:first-of-type {
     padding: 1em 10%;
   }
