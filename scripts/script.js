@@ -11,37 +11,42 @@ var scrollPosition = window.scrollY; // sets scroll position from the top of the
 // listens to event "click" on menuButton
 menuButton.addEventListener("click", showMenu); 
 
-function showMenu() { // Open and close nav menu
+// checks and updates if/when window is being scrolled in
+window.addEventListener("scroll", updateScrollPosition)
+
+function updateScrollPosition() {
+
+    if (scrollPosition < 100) {
+        headerSection.classList.add("scrollHeader");
+        menuIcon.classList.add("scrollHeader");
+        menuIcon.src = "./images/menu-white.png";
+        dopperLogo.src = "./images/dopperblauw.svg";
+        navMenu.classList.add("blueText");
+
+    } else {
+
+    }
+}
+
+function showMenu() { // open and close nav menu
     navMenu.classList.toggle("showMenu"); // uses translateX to move nav into screen
 
     // conditional statement checks if navMenu contains class .showMenu
     if (navMenu.classList.contains("showMenu")) { 
         menuIcon.src = "./images/cross.png"; // changes icon to a cross
-        menuIcon.classList.add("exitMenu"); // gives blue background to cross icon
+        dopperLogo.src = "./images/dopperblauw.svg"; // changes dopper logo into blue variation
+        menuIcon.classList.add("exitMenu"); // gives blue background to icon
     } else {
-        menuIcon.src = "./images/menu-white.png"; // changes icon back to menu 
         menuIcon.classList.remove("exitMenu"); // deletes blue background
+
+        if (scrollPosition < 100) {
+            dopperLogo.src = "./images/dopperwit.svg"; // changes dopper logo into blue variation
+            menuIcon.src = "./images/menu.png"; // changes icon back to menu blue
+        } else {
+            dopperLogo.src = "./images/dopperblauw.svg"; // changes dopper logo into blue variation
+            menuIcon.src = "./images/menu-white.png"; // changes icon back to menu white
+        }
+
     }
 };
-
-// When the user scrolls down from the top of the document, add class 'scrollHeader' and change logo
-// window.addEventListener("scroll", scrollChangeMenu);
-
-// function scrollChangeMenu() {
-//     if (scrollPosition <= 0) {
-//         headerSection.classList.add("scrollHeader"); // gives transparent background and border-bottom white
-//         menuIcon.classList.add("scrollHeader"); // gives icon white background
-//         menuIcon.src = "./images/menu.png"; // changes icon into blue variation
-//         dopperLogo.src = "./images/dopperwit.svg"; // changes dopper logo into white variation
-
-//     } else {
-//         headerSection.classList.remove("scrollHeader");
-//         menuIcon.classList.remove("scrollHeader");
-//         menuIcon.src = "./images/menu-white.png";
-//         dopperLogo.src = "./images/dopperblauw.svg";
-
-//     }
-
-//     console.log(scrollPosition); // always logs 0?
-// };
 
