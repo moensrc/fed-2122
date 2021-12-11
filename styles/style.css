@@ -45,15 +45,8 @@ time, mark, audio, video {
   --brand-color-white: white;
   --brand-color-black: black;
   --brand-color-lightgray: rgb(182, 182, 182);
-  --brand-color-overlay: rgba(0, 0, 0, 0.5);
+  --brand-color-overlay: rgba(0, 0, 0, 0.2);
 }
-
-/* color pallette for if user has default dark theme set on browser */
-/* @media (prefers-color-scheme:dark) {
-  :root {
-    
-  }
-} */
 
 
 
@@ -114,7 +107,7 @@ header { /* the whole header, including topbar, nav and banner */
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 0 0 48em var(--brand-color-overlay); /* use of a box-shadow so image will have black/transparent overlay */
+  box-shadow: inset 0 0 48em 15em var(--brand-color-overlay); /* use of a box-shadow so image will have black/transparent overlay */
 }
 
 header nav {
@@ -168,6 +161,7 @@ header nav ul li a:focus { /* sets styles for hover on a's in nav*/
   outline: none; /* deletes 'outline' setting of focus pseudoclass */
 }
 
+/* topbar */
 header section:first-of-type {
   width: 100vw;
   position: fixed; /* make topbar in header fixed */
@@ -211,11 +205,9 @@ header section:first-of-type button:focus {
 header section:first-of-type button img {
   width: 2.5em;
   height: 2.5em;
-  
   padding: .5em;
 
   background-color: var(--brand-color-white);
-
   border-radius: 2em;
 }
 
@@ -228,6 +220,7 @@ header section:first-of-type button img.scrollHeader { /* when user scrolls, add
   background-color: var(--brand-color-darkblue);
 }
 
+/* header banner */
 header section:nth-of-type(2) {
   display: flex;
   flex-direction: column; /* display text and a underneath eachother */
@@ -235,6 +228,43 @@ header section:nth-of-type(2) {
   justify-content: center;
 
   margin: 4em 2em 3em 2em;
+}
+
+header section:nth-of-type(2) h1 span {
+  display: inline-block;
+
+  transform: scale(0);
+  animation: popup-headingBanner .4s cubic-bezier(.50 , .5, 0 , 1);
+  animation-fill-mode: forwards; /* sets 100% keyframe as permanent styling */
+}
+
+/* each span after the first, has an animation delay */
+header section:nth-of-type(2) h1 span:nth-of-type(2) {
+  animation-delay: .4s;
+}
+
+header section:nth-of-type(2) h1 span:nth-of-type(3) {
+  animation-delay: .8s;
+}
+
+header section:nth-of-type(2) h1 span:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+
+header section:nth-of-type(2) h1 span:nth-of-type(5) {
+  animation-delay: 1.6s;
+}
+
+/* animation for text pop-up in header banner */
+@keyframes popup-headingBanner { /* text sizes up from bottom left */
+  0% {
+    transform: scale(0);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
 }
 
 header section:nth-of-type(2) a { /* link to shop page */
@@ -288,7 +318,12 @@ footer details summary {
 
 footer details summary:hover,
 footer details summary:focus { /* hover and focus styling for summary */
+  font-weight: 700;
+
   color: var(--brand-color-darkblue);
+  border-top: .1em solid var(--brand-color-darkblue);
+  border-bottom: .1em solid var(--brand-color-darkblue);
+
 }
 
 footer details[open] summary { /* when details is open */
@@ -310,7 +345,13 @@ footer details[open] summary ~ * { /* select all items in summary */
   } 
 }
 
+footer details ul {
+  list-style-type: none;
+  margin-left: 1em;
+}
+
 footer details ul li a {
+  text-decoration: none;
   color: var(--brand-color-darkblue);
   font-weight: 500;
 }
@@ -322,25 +363,19 @@ footer details ul li a:focus { /* hover and focus styling for links in details u
   text-decoration-color: var(--brand-color-yellow);
 }
 
-/* section with social media links */
-footer section {
+/* list with social media links */
+footer > ul:first-of-type {
   display: flex;
   align-items: center; /* center content in section */
   justify-content: center;
 
   margin-top: 2em;
-}
-
-footer section ul {
-  display: flex;
-  flex-direction: row; /* put links in a row */
-  justify-content: flex-start;
 
   text-decoration: none;
   list-style: none;
 }
 
-footer section ul li a {
+footer > ul:first-of-type li a {
   display: flex;
   align-items: center; /* center a in img, so background-color is even */
   justify-content: center;
@@ -351,24 +386,24 @@ footer section ul li a {
   border-radius: 2em;
 }
 
-footer section ul li a:hover,
-footer section ul li a:focus { /* hover and focus states for social media links */
+footer > ul:first-of-type li a:hover,
+footer > ul:first-of-type li a:focus { /* hover and focus states for social media links */
   background-color: var(--brand-color-teal);
   transform: scale(1.2);
 }
 
-footer section ul li a:active { /* active state for social media links */
+footer > ul:first-of-type li a:active { /* active state for social media links */
   box-shadow: .05em .05em .1em var(--brand-color-black);
 }
 
 /* extra links (terms & conditions, privacy policy & return policy) */
-footer > ul {
+footer > ul:nth-of-type(2) {
   margin-top: 2em;
   list-style: none;
   padding-left: 1em; 
 }
 
-footer > ul li a {
+footer > ul:nth-of-type(2) li a {
   text-decoration: none;
   line-height: 2;
 
@@ -376,8 +411,8 @@ footer > ul li a {
   text-transform: uppercase;
 }
 
-footer > ul li a:hover,
-footer > ul li a:focus { /* hover and focus states for extra links in footer */
+footer > ul:nth-of-type(2) li a:hover,
+footer > ul:nth-of-type(2) li a:focus { /* hover and focus states for extra links in footer */
   color: var(--brand-color-teal);
 }
 
@@ -744,6 +779,22 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
   color: var(--brand-color-lightgray); 
 }
 
+main section:nth-of-type(7) button:hover,
+main section:nth-of-type(7) button:focus {
+  cursor: pointer;
+
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-teal);
+  transition: .5s ease-in-out;
+}
+
+main section:nth-of-type(7) button:active {
+  box-shadow: .25em .25em .5em var(--brand-color-darkblue);
+}
+
 
 
 /**********************************************************/
@@ -1066,13 +1117,16 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
   }
 }
 
+
+
+
+
 /**********************************************************/
 /*                    MEDIA QUERIES                       */
 /**********************************************************/
 
 /* from breakpoint: tablet format (min-width = 768px) */
 @media only screen and (min-width: 768px) {
-
   /***********/
   /* GENERAL */
   /***********/
@@ -1081,13 +1135,15 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
     font-size: 2.5em;
   }
 
+
+
   /****************/
   /* HEADER + NAV */
   /****************/
 
   header {
     background-size: 150%;
-    box-shadow: inset 0 0 64em var(--brand-color-black);
+    box-shadow: inset 0 0 15em 25em var(--brand-color-overlay);
   }
 
   header section:first-of-type {
@@ -1153,7 +1209,23 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
   /* FOOTER */
   /**********/
 
-  /* no code (yet!) */
+  /* list with social media links */
+  footer > ul:first-of-type {
+    align-items: flex-start; 
+    justify-content: flex-start;
+  }
+
+  /* extra links (terms & conditions, privacy policy & return policy) */
+  footer > ul:nth-of-type(2) {
+    display: flex; /* places links in row */
+
+    padding-left: 0;
+  }
+
+  footer > ul:nth-of-type(2) li {
+    margin-right: 2em; /* add space between list items */
+  }
+
 
 
   /*************/
@@ -1257,6 +1329,8 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
     width: 30em; /* change width, so it's not getting wider any longer */
   }
 
+
+
   /*************/
   /* MAIN SHOP */
   /*************/
@@ -1269,6 +1343,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
 
   /* section with 2 featured cards (shop) */
   .shop main section:nth-of-type(2) { 
+    position: relative; /* position = relative to place the second article inside this container */
     flex-direction: row;
 
     padding-top: 0;
@@ -1336,6 +1411,7 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
   }
 
 
+
   /****************/
   /* HEADER + NAV */
   /****************/
@@ -1352,12 +1428,6 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
 
   }
 
-
-  /**********/
-  /* FOOTER */
-  /**********/
-
-   /* no code (yet!) */
 
 
   /*************/
@@ -1415,6 +1485,8 @@ main section:nth-of-type(7) form input[type=email]::placeholder { /* style just 
   main section:nth-of-type(6) h2 {
     top: 3em;
   }
+
+
 
   /*************/
   /* MAIN SHOP */
