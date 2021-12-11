@@ -154,7 +154,7 @@ Over het algemeen ging het dus erg goed deze week. Ik heb een paar vragen gestel
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
-Lijst met je bevindingen die in de test naar voren kwamen:
+Lijst met je bevindingen die in de test naar voren kwamen: <br>
  <strong>Keyboard en screenreader</strong>
  - Mobile: screenreader en tab knop lezen/selecteren alle nav a items, het menu wordt niet opengevouwen.
  - Button video, Sign up button en eerste sections a's moeten nog een :focus, :hover & :active styling
@@ -168,9 +168,6 @@ Lijst met je bevindingen die in de test naar voren kwamen:
     - Geen inzichten/bevindingen
  - Color:
     - Kleuren zijn herkenbaar en verschillen genoeg van elkaar. Contrast is goed.
-
-<strong>Ballonnen</strong>
-- 
  
 #### Screenreader leest nav, maar vouwt niet uit.
 Wanneer alleen de screenreader wordt gebruikt, wordt het hamburgermenu niet geopend, maar worden wel de list items hierin voorgelezen. Hetzelfde geldt als je enkel tabt door de site. De nav elementen worden geselecteerd maar zijn niet zichtbaar.
