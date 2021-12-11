@@ -83,7 +83,6 @@ De HTML heb ik door een validator gehaald en heb ik de warnings (geen errors, ya
 <img src="images/proces-mobile1-snippet3.png" width="375px" alt="Proces 1 - Mobile (Snippet 3: Header)">
 
 ### Agenda voor meeting
-samen met je groepje opstellen
 
 | Rosella Moens     | Ilias Ouyaliz       | Hong Zhou    | Stefan Radouane        |
 | ---            | ---                | ---          | ---              |
@@ -93,8 +92,6 @@ samen met je groepje opstellen
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
 - Van nav een ul maken
 - Getal als span in 1 h3
 - h2 van titels vd sections sections
@@ -131,7 +128,6 @@ Over het algemeen ging het dus erg goed deze week. Ik heb een paar vragen gestel
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
 
 | Rosella Moens | Ilias Ouyaliz | Hong Zhou | Stefan Radouane  |
 | ---            | ---                | ---          | ---   |
@@ -141,12 +137,10 @@ samen met je groepje opstellen
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
 - Voor de scrollposY kan ik een class toevoegen aan de header (function van scrollPosition).
 - Wanneer ik de functions herschrijf, kan ik ook het iconen probleem oplossen (update: fixed!)
 - Strong ipv Span om h3? Nog even over nadenken.
-
+- Verder super goed bezig!!
 
 </details>
 
@@ -214,31 +208,41 @@ Color aanpassen zodat het opvallender is en het contrast hoger is..
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik ben bijna klaar met de HTML/CSS en JS. De HTML en CSS waren me voornamelijk goed afgegaan. Ik had wat problemen met de scroll function die ik had geschreven in JS. Ik heb verschillende dingen geprobeerd, waardoor ik niet echt het resultaat kreeg waarop ik had gehoopt. De scroll eventListener die ik had opgesteld glitchde raar. Met een beetje hulp van de docent (Robert) is het gelukt om de functie op te zetten. Ik was er wel bijna! Nadat dit was de grootste struggle gelukkig voorbij. 
+<br>
+ <strong>De site voldoet aan de eisen van de surface plane en is nu ook responsive!</strong>
+<br>
+Het is nu nog een kwestie van kleine details en het zetten van de puntjes op de i. Vooral de CSS moet ik nog aanpassen adhv de Toegangelijkheidstest van deze week. Daarnaast wil ik nog een animatie aanmaken voor de tekst in de header banner.
+<img src="images/proces-mobile3-snippet1.png" width="375px" alt="Proces 3 snippet 1- Mobile">
+<img src="images/proces-mobile3-snippet2.png" width="375px" alt="Proces 3 snippet 2- Mobile">
+<img src="images/proces-mobile3-snippet3.png" width="375px" alt="Proces 3 snippet 3- Mobile">
+<img src="images/proces-mobile3-snippet4.png" width="375px" alt="Proces 3 snippet 4- Mobile">
+<img src="images/proces-tablet3-snippet1.png" width="375px" alt="Proces 3 snippet 1- Tablet">
+<img src="images/proces-tablet3-snippet2.png" width="375px" alt="Proces 3 snippet 2- Tablet">
+<img src="images/proces-tablet3-snippet3.png" width="375px" alt="Proces 3 snippet 3- Tablet">
+<img src="images/proces-tablet3-snippet4.png" width="375px" alt="Proces 3 snippet 4- Tablet">
+
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
 
 | Rosella Moens      | Hong Zhou          | Ilias Ouyaliz   | Stefan Radouane      |
 | ---            | ---                | ---          | ---              |
-| JS animation  | Met media queries img src aanpassen  | Flexbox en css grid | Accordion maken |
+| Header js animation | Met media queries img src aanpassen | Flexbox en css grid| Accordion maken |
 | Darkmode colors in root | 9 images toevoegen met 1 button | Logo in midden | SVG stroke uitlijnen naar binnen |
 | Footer flexen? | hamburger menu animatie  | Images width   | Pagina's overeenkomen?  |
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik ben goed bezig!
+- Code is netjes
+   - Comments in CSS goed
+- Animatie zeker proberen na te bootsen
+  - Al is het anders, that's fine.
+- Darkmode niet nodig, je hebt al genoeg features
+- Footer kan ik nog flexen, geen prioriteit aan stellen
 
 </details>
-
-
-
 
 
 ## Eindgesprek (week 5)
@@ -247,11 +251,19 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Na het laatste voortgangsgesprek ben ik verder gegaan met het toevoegen van de laatste details. Ik heb de laatste aanpassingen gedaan aan de CSS, waaronder de aanpassingen adhv de Toegankelijkheidstest en de animatie voor op de H1 op de home page. <br>
+Ik ben super tevreden met mijn eindresultaat. Het is me toch gelukt om de surface plane uit te werken én de site responsive te maken. De Dopper website was een goede uitdaging voor mij om na te maken, doordat er veel aandacht is besteed aan de sites styling, animaties en responsiveness. Uiteindelijk heb ik een resultaat dat wel heel dichtbij de echte Dopper site komt!<br>
+Ik heb vooral veel mogen leren over CSS animatie (ik wist niet eens dat dat bestond..) en JS events tijdens het nabouwen van de website. Ik ben erg trots op mezelf dat ik dit from scratch heb kunnen maken.
 
 ### Screenshot(s)
+<img src="images/final-site-mobile.png" alt="Final site Mobile size">
+<img src="images/final-site-tablet.png" alt="Final site Tablet size">
+<img src="images/final-site-tablet.png" alt="Final site Desktop size">
 
-hier screenshot(s) van je eindresultaat
+<img src="images/final-site-mobile-shop.png" alt="Final site Shop page Mobile size">
+<img src="images/final-site-tablet-shop.png" alt="Final site Shop page Tablet size">
+<img src="images/final-site-tablet-shop.png" alt="Final site Shop page Desktop size">
+
 
 </details>
 
@@ -284,5 +296,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 16. CSS Media Queries (browserstack) https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints
 17. CSS object-fit (digitalocean & mozilla) https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit & https://developer.mozilla.org/en-US/docs/Web/CSS/object-position?retiredLocale=nl
 18. CSS hiding elements with display & visibility (allyjs) https://allyjs.io/tutorials/hiding-elements.html
+19. CSS animation-timing (mozilla) https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+20. CSS animation-fill-mode (mozilla & cubic-bezier) https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode & https://cubic-bezier.com/#
 
 </details>
