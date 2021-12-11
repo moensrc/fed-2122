@@ -1,0 +1,1504 @@
+/**********************/
+/* CSS DOCUMENT RESET */
+/**********************/
+
+/*CSS Reset http://meyerweb.com/eric/tools/css/reset/ */  
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* CSS Document */
+*, *::after, *::before, html {
+  box-sizing:border-box;  
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/*************************/
+/* COLOR PALETTE IN ROOT */
+/*************************/
+
+:root {
+  --brand-color-lightblue: RGB(244, 254, 255);
+  --brand-color-darkblue: RGB(26, 47, 100);
+  --brand-color-teal: RGB(151, 214, 219);
+  --brand-color-yellow: RGB(255, 234, 127);
+  --brand-color-white: white;
+  --brand-color-black: black;
+  --brand-color-lightgray: rgb(182, 182, 182);
+  --brand-color-overlay: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*************************/
+/* BODY AND GENERAL TEXT */
+/*************************/
+
+body {
+  font-family: 'Poppins', sans-serif; /* font-family of all text */
+}
+
+h1 {
+  margin-top: 2em;
+  text-align: center;
+
+  font-size: 1.75em;
+  font-weight: 700;
+  color: var(--brand-color-white);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1;
+  color: var(--brand-color-darkblue);
+  padding-bottom: .5em;
+}
+
+h3 {
+  font-weight: 700;
+  color: var(--brand-color-darkblue);
+}
+
+p {
+  text-align: left;
+  line-height: 1.5;
+  padding-bottom: 1em;
+}
+
+
+
+/****************/
+/* HEADER + NAV */
+/****************/
+
+header { /* the whole header, including topbar, nav and banner */
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../images/homepage-header.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 48em 15em var(--brand-color-overlay); /* use of a box-shadow so image will have black/transparent overlay */
+}
+
+header nav {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;  /* flex nav items underneath eachother */
+}
+
+header nav ul {
+  padding: 4em 2em 2em 2em;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  list-style: none; /* deletes ::marker */
+  background-color: var(--brand-color-white);
+
+  line-height: 2.5;
+
+  z-index: 4; /* places the nav ul above all content, but below the heading */
+  transform: translateX(100%); /* moves nav 100% to the right (out of viewport) */
+  transition: 0.5s; /* transition for showMenu */
+}
+
+
+header nav ul.showMenu {
+  transform: translateX(0%); /* moves nav back to the original place (fills whole viewport) */
+}
+
+header nav ul li a {
+  text-decoration: none; /* removes standard underline style */
+  color: var(--brand-color-darkblue);
+  font-size: 1.75em;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+
+header nav ul li a:active,
+header nav ul li a:hover, 
+header nav ul li a:focus { /* sets styles for hover on a's in nav*/
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-decoration-style: solid;
+  text-decoration-color: var(--brand-color-yellow);
+
+  outline: none; /* deletes 'outline' setting of focus pseudoclass */
+}
+
+/* topbar */
+header section:first-of-type {
+  width: 100vw;
+  position: fixed; /* make topbar in header fixed */
+  top: 0;
+
+  z-index: 5; /* fixed topbar should always be on front of all other content */
+
+  padding: .5em 1.5em .5em 1.5em;
+
+  display: flex;
+  flex-direction: row; /* sets logo and hamburger button in row */
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: transparent;
+  border-bottom: .1em solid var(--brand-color-white);
+  
+}
+
+header section:first-of-type.scrollHeader { /* when scrolling, add .scrollHeader class (see JS) */
+  background-color: var(--brand-color-white);
+  border-bottom: .1em solid var(--brand-color-lightgray);
+}
+
+header section:first-of-type > img { /* Dopper logo */
+  height: 1.5em;
+  width: auto;
+}
+
+header section:first-of-type button { /* nav button */
+  border: none; /* reset default styles */
+  background-color: transparent; /* reset default styles */
+}
+
+header section:first-of-type button:hover,
+header section:first-of-type button:focus {
+  transform: scale(1.2);
+  transition: .2s ease-in;
+}
+
+header section:first-of-type button img {
+  width: 2.5em;
+  height: 2.5em;
+  padding: .5em;
+
+  background-color: var(--brand-color-white);
+  border-radius: 2em;
+}
+
+header section:first-of-type button img.exitMenu { /* when menu is opened, add class exitMenu */
+  background-color: var(--brand-color-darkblue);
+}
+
+
+header section:first-of-type button img.scrollHeader { /* when user scrolls, add class scrollHeader */
+  background-color: var(--brand-color-darkblue);
+}
+
+/* header banner */
+header section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column; /* display text and a underneath eachother */
+  align-items: center; /* & center them */
+  justify-content: center;
+
+  margin: 4em 2em 3em 2em;
+}
+
+header section:nth-of-type(2) h1 span {
+  display: inline-block;
+
+  transform: scale(0);
+  animation: popup-headingBanner .4s cubic-bezier(.50 , .5, 0 , 1);
+  animation-fill-mode: forwards; /* sets 100% keyframe as permanent styling */
+}
+
+/* each span after the first, has an animation delay */
+header section:nth-of-type(2) h1 span:nth-of-type(2) {
+  animation-delay: .4s;
+}
+
+header section:nth-of-type(2) h1 span:nth-of-type(3) {
+  animation-delay: .8s;
+}
+
+header section:nth-of-type(2) h1 span:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+
+header section:nth-of-type(2) h1 span:nth-of-type(5) {
+  animation-delay: 1.6s;
+}
+
+/* animation for text pop-up in header banner */
+@keyframes popup-headingBanner { /* text sizes up from bottom left */
+  0% {
+    transform: scale(0);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
+}
+
+header section:nth-of-type(2) a { /* link to shop page */
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: var(--brand-color-darkblue);
+  background-color: var(--brand-color-yellow);
+  padding: 1em;
+  margin: 1em;
+
+  border-radius: 2em;
+}
+
+header section:nth-of-type(2) a:hover,
+header section:nth-of-type(2) a:focus {
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-white);
+  transition: .5s ease-in-out;
+}
+
+header section:nth-of-type(2) a:active {
+  box-shadow: .25em .25em .5em var(--brand-color-darkblue);
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+  padding: 2em;
+}
+
+/* details + summary with custom styling */
+footer details summary {
+  cursor: pointer; /* add pointer cursor because it's an interactive element */
+
+  padding: .5em;
+  margin: -.1em;
+
+  list-style-type: "+ "; /* sets custom list style to '+' */
+  color: var(--brand-color-lightgray);
+  border-top: .1em solid var(--brand-color-lightgray);
+  border-bottom: .1em solid var(--brand-color-lightgray);
+}
+
+footer details summary:hover,
+footer details summary:focus { /* hover and focus styling for summary */
+  font-weight: 700;
+
+  color: var(--brand-color-darkblue);
+  border-top: .1em solid var(--brand-color-darkblue);
+  border-bottom: .1em solid var(--brand-color-darkblue);
+
+}
+
+footer details[open] summary { /* when details is open */
+  list-style-type: "- "; 
+}
+
+footer details[open] summary ~ * { /* select all items in summary */
+  animation: openSummary .5s ease-in-out; 
+}
+
+@keyframes openSummary { /* animation fades in details from the left */
+  0% {
+    opacity: 0;
+    transform: translateX(-5%); /* moves items to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* moves items back (right) */
+  } 
+}
+
+footer details ul {
+  list-style-type: none;
+  margin-left: 1em;
+}
+
+footer details ul li a {
+  text-decoration: none;
+  color: var(--brand-color-darkblue);
+  font-weight: 500;
+}
+
+footer details ul li a:hover,
+footer details ul li a:focus { /* hover and focus styling for links in details ul li */
+  text-decoration: underline;
+  text-decoration-thickness: .2em;
+  text-decoration-color: var(--brand-color-yellow);
+}
+
+/* list with social media links */
+footer > ul:first-of-type {
+  display: flex;
+  align-items: center; /* center content in section */
+  justify-content: center;
+
+  margin-top: 2em;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+footer > ul:first-of-type li a {
+  display: flex;
+  align-items: center; /* center a in img, so background-color is even */
+  justify-content: center;
+
+  padding: .25em;
+  margin: .25em;
+  background-color: var(--brand-color-yellow);
+  border-radius: 2em;
+}
+
+footer > ul:first-of-type li a:hover,
+footer > ul:first-of-type li a:focus { /* hover and focus states for social media links */
+  background-color: var(--brand-color-teal);
+  transform: scale(1.2);
+}
+
+footer > ul:first-of-type li a:active { /* active state for social media links */
+  box-shadow: .05em .05em .1em var(--brand-color-black);
+}
+
+/* extra links (terms & conditions, privacy policy & return policy) */
+footer > ul:nth-of-type(2) {
+  margin-top: 2em;
+  list-style: none;
+  padding-left: 1em; 
+}
+
+footer > ul:nth-of-type(2) li a {
+  text-decoration: none;
+  line-height: 2;
+
+  color: var(--brand-color-lightgray);
+  text-transform: uppercase;
+}
+
+footer > ul:nth-of-type(2) li a:hover,
+footer > ul:nth-of-type(2) li a:focus { /* hover and focus states for extra links in footer */
+  color: var(--brand-color-teal);
+}
+
+/* copyright text */
+footer p {
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+
+
+
+/**********************************************************/
+/*                      HOME PAGE                         */
+/**********************************************************/
+
+/************/
+/* MAIN HOME*/
+/************/
+
+main a, main form button { /* styles main a & button */
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: var(--brand-color-darkblue);
+  background-color: var(--brand-color-yellow);
+  padding: 1em;
+  margin: 1em;
+  border: none;
+
+  border-radius: 2em;
+}
+
+main a:hover, 
+main a:focus { /* hover and focus state styles for main a */
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-white);
+  transition: .5s ease-in-out;
+}
+
+main a:active {
+  box-shadow: .25em .25em .5em var(--brand-color-darkblue);
+}
+
+
+
+/***************/
+/* INFO DOPPER */
+/***************/
+
+/* selector for the direct ul child of the main element */
+main > ul {
+  list-style-type: none;
+  background-color: var(--brand-color-lightblue);
+  padding: 2em;
+}
+
+main > ul img {
+  height: 4.5em;
+  width: auto;
+  margin-bottom: .5em;
+}
+
+main > ul p {
+  font-weight: 500;
+}
+
+main > ul li {
+  margin-bottom: 3em;
+  display: flex;
+  flex-wrap: wrap; /* puts h3, img next to eachother and wraps p down (mobile) */
+}
+
+main > ul li h3 {
+  overflow-wrap: break-word; /* breaks h3 up into span and rest of h3 */
+  width: 8em;
+}
+
+main > ul li h3 span { /* text in span (number) is styled differently*/
+  font-size: 3em;
+  line-height: 1;
+  padding-right: 1em;
+}
+
+
+
+/*****************/
+/* MAIN SECTIONS */
+/*****************/
+
+main section { /* general padding set for all sections */
+  padding: 6.25% 6.25% 6.25% 6.25%;
+}
+
+main section p:last-of-type {
+  padding-bottom: 2em; /* add padding to bottom of last p in a section*/
+}
+
+/* first section in main (home page): card 1 */ 
+main section:first-of-type {
+  display: flex;
+  flex-direction: column;
+  
+  background-color: var(--brand-color-teal);
+}
+
+main section:first-of-type h2 {
+  text-align: left;
+}
+
+main section:first-of-type img {
+  margin-bottom: 1.5em;
+  width: 80vw;
+  /* puts image first in flex-order */
+  order: -1;
+}
+
+main section:first-of-type a {
+  width: fit-content;
+  margin: 0;
+}
+
+/* second section in main (home page): card 2 */ 
+main section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--brand-color-darkblue);
+  color: var(--brand-color-white);
+}
+
+main section:nth-of-type(2) h2, 
+main section:nth-of-type(2) h3 {
+  color: var(--brand-color-white);
+  text-align: left;
+  padding-bottom: .5em;
+}
+
+main section:nth-of-type(2) h3 {
+  order: -1;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+main section:nth-of-type(2) img {
+  margin-bottom: 1.5em;
+  width: 80vw;
+  /* puts image first in flex-order */
+  order: -2; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* crops the image asymmetrically: roundness in 4 values */
+  border-radius: 80% 54% 74% 54%;
+}
+
+main section:nth-of-type(2) a {
+  width: fit-content;
+  margin: 0;
+}
+
+/* third section in main (home page): 2 featured cards in section */ 
+main section:nth-of-type(3) article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-bottom: 1em;
+
+  background-color: var(--brand-color-teal);
+}
+
+main section:nth-of-type(3) article h3 {
+  padding: 1em;
+}
+
+main section:nth-of-type(3) article img {
+  width: 100%;
+
+  order: -1;
+}
+
+main section:nth-of-type(3) article:first-of-type { /* 1st featured card */ 
+  position: relative;
+  right: 1.5em; /* move left */
+  overflow-x: hidden;
+}
+
+main section:nth-of-type(3) article:nth-of-type(2) { /* 2nd featured card */ 
+  position: relative;
+  top: -1em; /* move up */
+  left: 1.25em; /* move right */
+  overflow-x: hidden;
+}
+
+/* fourth section in main (home page): news 'splash' */ 
+main section:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: var(--brand-color-lightblue);
+}
+
+main section:nth-of-type(4) h2 {
+  text-align: center;
+}
+
+main section:nth-of-type(4) h2, 
+main section:nth-of-type(5) h2,
+main section:nth-of-type(7) h2 {
+  font-size: 2.5em;
+}
+
+main section:nth-of-type(4) p {
+  text-align: center;
+}
+
+main section:nth-of-type(4) ul { /* unordered list of news articles */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+main section:nth-of-type(4) ul li { 
+  width: 80vw;
+
+  display: flex;
+  flex-direction: column; /* flex elements as column: li holds h3, img and time */
+  margin: 1em 1em 2em 1em;
+}
+
+main section:nth-of-type(4) ul li h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  order: 3; /*puts h3 underneath image and time*/
+}
+
+main section:nth-of-type(4) ul li img {
+  width: 80vw;
+  height: auto;
+  padding: 0;
+
+  order: 1; /* puts img above all*/ 
+}
+
+main section:nth-of-type(4) ul li time {
+  order: 2; /*puts time underneath img and above h3*/
+}
+
+main section:nth-of-type(4) a:hover,
+main section:nth-of-type(4) a:focus,
+main section:nth-of-type(5) a:hover,
+main section:nth-of-type(5) a:focus { /* hover and focus states for the buttons in sections 4 & 5 */
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-teal);
+  transition: .5s ease-in-out;
+}
+
+/* fifth section in main (home page): 'geinteresseerd in onze flessen?' */ 
+main section:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--brand-color-lightblue);
+}
+
+/* sixth section in main (home page): video banner */ 
+main section:nth-of-type(6) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url("../images/dopper-brand-movie.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400%; 
+  padding: 10em 0em 10em 0em;
+}
+
+main section:nth-of-type(6) h2 {
+  position: relative; /* use position relative to place h2 bottom right of the section */ 
+  top: 4.25em;
+  right: 1.5em;
+  order: 2;
+
+  width: 60vw;
+
+  text-align: left;
+  color: var(--brand-color-white);
+}
+
+main section:nth-of-type(6) a { /* link is a blob with a play icon (main section:nth-of-type(6) a img) */ 
+  background-color: var(--brand-color-white);
+  padding: 2.8em 2.8em 2.8em 3em;
+  border-radius: 10em 8em 11em 8em;
+
+  transition: .3s ease-in; /* transition for hover & focus states */
+}
+
+main section:nth-of-type(6) a:hover,
+main section:nth-of-type(6) a:focus {
+  background-color: var(--brand-color-teal);
+  border-radius: 8em 10em 8em 11em;
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(6) a img {
+  width: 2em;
+  height: auto;
+}
+
+/* seventh section in main (home page): newsletter signup */ 
+main section:nth-of-type(7) {
+  padding-top: 2em;
+
+  background-color: var(--brand-color-lightblue);
+}
+
+main section:nth-of-type(7) form { 
+  display: flex;
+  flex-direction: column; /* place form elements (input & button) underneath eachother with flex */
+  align-items: center;
+  justify-content: center;
+}
+
+main section:nth-of-type(7) form input[type=email] { /* email input */
+  width: 95%;
+  height: 2em;
+
+  font-family: 'Poppins', sans-serif; /* set font: delete default styling */
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--brand-color-darkblue); /* text that is typed in input, will be darkblue and bold */
+
+  border: none;
+  border-bottom: .1em solid var(--brand-color-lightgray);
+  background-color: var(--brand-color-lightblue);
+}
+
+main section:nth-of-type(7) form input[type=email]::placeholder { /* style just the placeholder */
+  font-family: 'Poppins', sans-serif; /* set font: delete default styling */
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--brand-color-lightgray); 
+}
+
+main section:nth-of-type(7) button:hover,
+main section:nth-of-type(7) button:focus {
+  cursor: pointer;
+
+  padding: 1em 2em;
+
+  font-weight: 600;
+
+  background-color: var(--brand-color-teal);
+  transition: .5s ease-in-out;
+}
+
+main section:nth-of-type(7) button:active {
+  box-shadow: .25em .25em .5em var(--brand-color-darkblue);
+}
+
+
+
+/**********************************************************/
+/*                          SHOP PAGE                     */
+/**********************************************************/
+
+/************************/
+/* HEADER CUSTOM STYLES */
+/************************/
+/* topbar */
+.shop header section:first-of-type {
+  background-color: var(--brand-color-white);
+  border-bottom: .1em solid var(--brand-color-lightgray);
+}
+
+.shop header section:first-of-type button img { /* hamburger menu icon */
+  background-color: var(--brand-color-darkblue);
+}
+
+.shop header nav ul li a {
+  color: var(--brand-color-darkblue);
+
+}
+ 
+
+
+/************/
+/* MAIN SHOP*/
+/************/
+.shop main {
+  color: var(--brand-color-darkblue); /* text color is standard darkblue */
+}
+
+
+
+/**********************/
+/* MAIN SHOP SECTIONS */
+/**********************/
+
+/* first section in main (shop page): links to products */ 
+.shop main section:first-of-type {
+  background-color: var(--brand-color-white);
+  margin: 3em 0 0 0;
+  padding: 0 1em 0 1em;
+}
+
+.shop main section:first-of-type ul {
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+
+  overflow-x: scroll;
+}
+
+.shop main section:first-of-type ul li {
+  margin: .5em;
+  white-space: nowrap;
+}
+
+.shop main section:first-of-type ul li a {
+  padding: 0;
+  margin: 0;
+
+  font-weight: 600;
+  text-transform: initial; /* text is default, instead of uppercase */
+
+  color: var(--brand-color-lightgray);
+  background-color: initial; /* reset background-color to standard white */
+  border-radius: 0;
+}
+
+.shop main section:first-of-type ul li a:active,
+.shop main section:first-of-type ul li a:hover,
+.shop main section:first-of-type ul li a:focus { /* active, hover & focus states for links to products */
+  box-shadow: none; /* reset box-shadow that's on the a's on the main */
+  color: var(--brand-color-darkblue);
+  transform: scale(1.1);
+}
+
+.shop main section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--brand-color-white);
+}
+
+.shop main section:nth-of-type(2) article {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 75vw;
+
+  padding-bottom: 2em;
+}
+
+.shop main section:nth-of-type(2) article img {
+  width: 100%;
+  order: -2; /* places image in flow before h3 & a */
+  margin-bottom: 0;
+
+  border-radius: 0;
+}
+
+.shop main section:nth-of-type(2) article h3 {
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: initial;
+
+  color: var(--brand-color-darkblue);
+  padding: 1em;
+}
+
+.shop main section:nth-of-type(2) article a {
+  margin-left: 1em;
+}
+
+.shop main section:nth-of-type(2) article:first-of-type { /* first featured card */
+  position: relative;
+  /* not moved, so it's centered (mobile) */
+  background-color: var(--brand-color-yellow);
+}
+
+.shop main section:nth-of-type(2) article:first-of-type a {
+  background-color: var(--brand-color-darkblue); /* different colors for contrast */
+  color: var(--brand-color-white);
+}
+
+.shop main section:nth-of-type(2) article:nth-of-type(2) { /* second featured card */
+  position: relative;
+  top: -1.2em; /* move up */
+  left: 1em; /* move right */
+  overflow-x: hidden;
+
+  background-color: var(--brand-color-teal);
+}
+
+.shop main section:nth-of-type(2) article:nth-of-type(2) a {
+  background-color: var(--brand-color-white); /* different colors for contrast */
+  color: var(--brand-color-darkblue);
+}
+
+/* ul with links */
+.shop main > ul { /* selector for direct ul child of parent main on shop page*/
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: initial; /* resets background-color to default white */
+  padding-top: 0;
+}
+
+.shop main > ul li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.shop main > ul li a {
+  padding: 0 1em 0 0;
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: var(--brand-color-darkblue);
+  background-color: initial;
+  border-radius: 0;
+}
+
+.shop main >  ul li a:active,
+.shop main >  ul li a:focus { /* active & focus states for links */
+  box-shadow: none; /* reset box-shadow from main a:focus/active */
+
+  color: var(--brand-color-teal);
+  font-weight: 600;
+  transform: scale(1.2);
+}
+
+.shop main >  ul li a:hover { /* hover state for links */
+  color: var(--brand-color-teal);
+  text-decoration: .2em underline;
+  text-decoration-color: var(--brand-color-yellow);
+}
+
+/* article 1 product overview on shop page */
+.shop main > article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2.5em;
+}
+
+
+.shop main > article:first-of-type ul {
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+
+  list-style-type: none;
+
+  overflow-x: hidden;
+}
+
+.shop main > article:first-of-type ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*position relative so we can place the svg inside the li container*/
+  position: relative;
+
+  text-align: center;
+
+  line-height: 1.8;
+}
+
+.shop main > article:first-of-type ul li h4 {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.2;
+} 
+
+.shop main > article:first-of-type ul li p {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.shop main > article:first-of-type ul li a {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+
+  order: -2; /* position img/a above title and price of the product */
+}
+
+.shop main > article:first-of-type ul li a:active,
+.shop main > article:first-of-type ul li a:focus {
+  box-shadow: none;
+}
+
+.shop main > article:first-of-type ul li img {
+  width: 10em;
+  height: auto;
+}
+
+.shop main > article:first-of-type ul li svg { /* blob */
+  width: 15em;
+  padding: .4em;
+
+  z-index: -1; /* position svg behind the photo of the dopper bottle */
+  position: absolute;
+  bottom: 5em;
+
+  opacity: 0;
+}
+
+/* styles for SVG's on shop page */
+.shop main > article:first-of-type ul li:hover svg,
+.shop main > article:first-of-type ul li a:active svg,
+.shop main > article:first-of-type ul li a:focus svg{
+  animation-name: blob-easeIn, blob-changingBlob;
+  animation-duration: 20s, 10s;
+  animation-iteration-count: 1, infinite;
+}
+
+.shop main > article:first-of-type ul li:first-of-type svg,
+.shop main > article:first-of-type ul li:nth-of-type(2) svg { 
+  fill: var(--brand-color-yellow); /* fill svg for dopper color lemon crush with brand yellow */
+}
+
+.shop main > article:first-of-type ul li:nth-of-type(3) svg {
+  fill: var(--brand-color-lightgray); /* fill svg for dopper color pure white with brand lightgray */
+}
+
+.shop main > article:first-of-type ul li:nth-of-type(4) svg {
+  fill: var(--brand-color-darkblue); /* fill svg for dopper color pacific blue with brand darkblue */
+}
+
+/* blob animations */
+@keyframes blob-easeIn { /* animate ease-in and ease-out blob when hovering */
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blob-changingBlob { /* animate blob while its being hovered or active */
+  0% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+  30% {
+    transform: scale(0.95) translateX(2%) translateY(2%);
+  }
+  60% {
+    transform: scale(1.02) translateX(2%) translateY(3%);
+  }
+  100% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+}
+
+
+
+
+
+/**********************************************************/
+/*                    MEDIA QUERIES                       */
+/**********************************************************/
+
+/* from breakpoint: tablet format (min-width = 768px) */
+@media only screen and (min-width: 768px) {
+  /***********/
+  /* GENERAL */
+  /***********/
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+
+
+  /****************/
+  /* HEADER + NAV */
+  /****************/
+
+  header {
+    background-size: 150%;
+    box-shadow: inset 0 0 15em 25em var(--brand-color-overlay);
+  }
+
+  header section:first-of-type {
+    padding: 1em;
+  }
+
+  header section:first-of-type button {
+    display: none;
+  }
+
+  header nav ul { /* restyle the ul for min-width = 768px and beyond */
+    display: flex;
+    flex-direction: row; /* all li in a row */
+
+    white-space: nowrap; /* don't wrap words, text is on 1 line */
+
+    padding: 0;
+
+    position: fixed; /* fix nav to the top */
+    left: calc(55% / 2);
+    top: initial;
+    bottom: initial;
+    right: initial;
+    z-index: 10; /* place above all */
+    margin-top: 1em;
+
+    list-style: none;
+    background-color: transparent;
+
+    line-height: 1;
+
+    transform: translateX(0%); /* replace in screen */
+  }
+
+  header nav ul li:first-of-type { /* 'Join our wave' is placed most right */
+    order: 5; 
+  }
+
+  header nav ul li a {
+    font-size: .8em;
+    padding: 0 .5em;
+    color: var(--brand-color-white);
+    opacity: 1;
+  }
+
+  header nav ul li a:active,
+  header nav ul li a:hover, 
+  header nav ul li a:focus { /* active, hover & focus states for links in nav */
+    text-decoration-thickness: .25em;
+  }
+
+  header nav ul.blueText a {
+    color: var(--brand-color-darkblue);
+  }
+
+  header section:nth-of-type(2) {
+    margin: 10em 0; /* creates space so background-image can be larger */
+  }
+
+    
+
+  /**********/
+  /* FOOTER */
+  /**********/
+
+  /* list with social media links */
+  footer > ul:first-of-type {
+    align-items: flex-start; 
+    justify-content: flex-start;
+  }
+
+  /* extra links (terms & conditions, privacy policy & return policy) */
+  footer > ul:nth-of-type(2) {
+    display: flex; /* places links in row */
+
+    padding-left: 0;
+  }
+
+  footer > ul:nth-of-type(2) li {
+    margin-right: 2em; /* add space between list items */
+  }
+
+
+
+  /*************/
+  /* MAIN HOME */
+  /*************/
+
+  /* info dopper list */
+  main > ul {
+    padding: 5em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* create a 2 column layout with a grid */
+  }
+
+  main > ul li {
+    padding: 0 3em 0 0;
+    max-width: 25em;
+  }
+
+  main > ul li:last-of-type {
+    padding: 0;
+  }
+
+  /* cards */
+  main section:first-of-type,
+  main section:nth-of-type(2) {
+    flex-direction: row;
+    align-items: center;
+
+    padding: 3em 7%;
+  }
+
+  main section:first-of-type img,
+  main section:nth-of-type(2) img {
+    width: 45vw;
+    height: fit-content;
+
+    float: right;
+  }
+
+  main section:first-of-type img {
+    order: 1;
+    padding-left: 1em;
+
+  }
+
+  main section:nth-of-type(2) img { 
+    padding-right: 2em;
+  }
+
+  /* section with 2 featured cards */
+  main section:nth-of-type(3) {
+    padding-bottom: 0;
+  }
+
+  main section:nth-of-type(3) article {
+    width: 50vw;
+  }
+
+  main section:nth-of-type(3) article:first-of-type {
+    right: -1.5em;
+  }
+
+  main section:nth-of-type(3) article:first-of-type img,
+  main section:nth-of-type(3) article:nth-of-type(2) img {
+    width: 50vw;
+    height: 10em;
+    object-fit: cover; /* use object-fit to fit img inside set width & height */
+    object-position: center top;
+  }
+
+  main section:nth-of-type(3) article:nth-of-type(2) {
+    top: -5em;
+    left: 18em;
+    overflow-x: hidden;
+  }
+
+  /* news splash with news articles */
+  main section:nth-of-type(4) ul li {
+    width: 35vw;
+  }
+
+  main section:nth-of-type(4) ul li img {
+    width: 35vw;
+    height: 12em;
+    object-fit: cover; /* use object-fit to fit img inside set width & height */
+  }
+
+  main section:nth-of-type(4) h2, 
+  main section:nth-of-type(5) h2,
+  main section:nth-of-type(7) h2 {
+    font-size: 3em;
+  }
+
+  /* video img banner */
+  main section:nth-of-type(6) {
+    background-size: 200%; /* displays a wider view of the banner img */
+  }
+
+  main section:nth-of-type(7) form input[type=email] { /*the email input*/
+    width: 30em; /* change width, so it's not getting wider any longer */
+  }
+
+
+
+  /*************/
+  /* MAIN SHOP */
+  /*************/
+
+  /* list of links of products */
+  .shop main section:first-of-type ul {
+    overflow-x: initial;
+    padding: 1em 0;
+  }
+
+  /* section with 2 featured cards (shop) */
+  .shop main section:nth-of-type(2) { 
+    position: relative; /* position = relative to place the second article inside this container */
+    flex-direction: row;
+
+    padding-top: 0;
+  }
+
+  .shop main section:nth-of-type(2) article:first-of-type {
+    position: relative;
+    right: 6em; /* move left */
+    top: 0; /* set at top */
+
+    width: 35em; /* set width bigger than article 2 */
+  }
+
+  .shop main section:nth-of-type(2) article:first-of-type img {
+    width: 38em;
+    height: 15em;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .shop main section:nth-of-type(2) article:nth-of-type(2) {
+    position: absolute;
+    left: 60%; /* move right*/
+    top: 3.5em; /* move down */
+    width: 20em;
+  }
+
+  .shop main section:nth-of-type(2) article:nth-of-type(2) img {
+    width: 25em;
+    height: 10em;
+    object-fit: cover; 
+    object-position: center top;
+  }
+
+  /* links extra */
+  .shop main > ul {
+    padding-bottom: 1em;
+  }
+
+  .shop main > ul li,
+  .shop main > ul li a {
+    padding: 0;
+    margin: .5em;
+  }
+  
+  /* product overview */
+  .shop main > article:first-of-type ul li img {
+    width: 20em;
+  }
+  
+  .shop main > article:first-of-type ul li svg {
+    width: 25em;
+  }
+}  
+
+/* from breakpoint: laptop format (min-width = 1024px) */
+@media only screen and (min-width: 1024px) {
+  /***********/
+  /* GENERAL */
+  /***********/
+  
+  h1 {
+    font-size: 3em;
+    margin-top: 0;
+  }
+
+
+
+  /****************/
+  /* HEADER + NAV */
+  /****************/
+  header {
+    background-size: 100%;
+  }
+
+  header section:first-of-type {
+    padding: 1em 2em;
+  }
+
+  header nav ul {
+    left: calc(60% / 2);
+
+  }
+
+
+
+  /*************/
+  /* MAIN HOME */
+  /*************/
+
+  /* list dopper info */
+  main > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* card 1 & card 2 */
+  main section:first-of-type,
+  main section:nth-of-type(2) {
+    padding: 2em 7%;
+  }
+
+  main section:first-of-type img,
+  main section:nth-of-type(2) img {
+    width: 30vw;
+  }
+
+  /* section with 2 featured cards */
+  main section:nth-of-type(3) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main section:nth-of-type(3) article:nth-of-type(2) {
+    left: 0;
+    top: 2em;
+  }
+
+  main section:nth-of-type(3) article:first-of-type img,
+  main section:nth-of-type(3) article:nth-of-type(2) img {
+    height: 15em;
+  }
+
+  /* news splash */
+  main section:nth-of-type(4) {
+    padding-bottom: 0;
+  }
+
+  main section:nth-of-type(4) h2, 
+  main section:nth-of-type(5) h2,
+  main section:nth-of-type(7) h2 {
+    font-size: 4em;
+  }
+
+  /* video img banner */
+  main section:nth-of-type(6) {
+    background-size: 100%
+  }
+
+  main section:nth-of-type(6) h2 {
+    top: 3em;
+  }
+
+
+
+  /*************/
+  /* MAIN SHOP */
+  /*************/
+  
+  /* product overview */
+  .shop main > article:first-of-type {
+    padding: 1em 10%;
+  }
+
+  .shop main > article:first-of-type ul {
+    grid-template-columns: repeat(2, 35vw);
+  }
+
+}
