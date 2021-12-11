@@ -8,7 +8,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Jij
 
-<details>
+<details open>
 <summary>uitwerken voor kickoff</summary>
 
 ### Auteur:
@@ -244,13 +244,13 @@ Het is nu nog een kwestie van kleine details en het zetten van de puntjes op de 
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
 Na het laatste voortgangsgesprek ben ik verder gegaan met het toevoegen van de laatste details. Ik heb de laatste aanpassingen gedaan aan de CSS, waaronder de aanpassingen adhv de Toegankelijkheidstest en de animatie voor op de H1 op de home page. <br>
 Ik ben super tevreden met mijn eindresultaat. Het is me toch gelukt om de surface plane uit te werken én de site responsive te maken. De Dopper website was een goede uitdaging voor mij om na te maken, doordat er veel aandacht is besteed aan de sites styling, animaties en responsiveness. Uiteindelijk heb ik een resultaat dat wel heel dichtbij de echte Dopper site komt!<br>
-Ik heb vooral veel mogen leren over CSS animatie (ik wist niet eens dat dat bestond..) en JS events tijdens het nabouwen van de website. Ik ben erg trots op mezelf dat ik dit from scratch heb kunnen maken.
+Ik heb vooral veel mogen leren over CSS animatie (ik wist niet eens dat dat bestond..) en JS events tijdens het nabouwen van de website. Ik ben erg trots op mezelf dat ik dit from scratch heb kunnen maken. Ik heb mezelf constant gepushed om vooruit te werken om het ook mogelijk te maken om eigenlijk beiden focussen te doen.
 
 ### Screenshot(s)
 <img src="images/final-site-mobile.png" alt="Final site Mobile size">
