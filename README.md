@@ -151,7 +151,7 @@ Over het algemeen ging het dus erg goed deze week. Ik heb een paar vragen gestel
 ## Toegankelijkheidstest (week 4)
 
 <details>
-<summary>uitwerken na test in 8e voortgang</summary>
+<summary>uitwerken na test in 8e werkgroep</summary>
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen: <br>
@@ -168,7 +168,7 @@ Lijst met je bevindingen die in de test naar voren kwamen: <br>
     - Geen inzichten/bevindingen
  - Color:
     - Kleuren zijn herkenbaar en verschillen genoeg van elkaar. Contrast is goed.
- 
+
 #### Screenreader leest nav, maar vouwt niet uit.
 Wanneer alleen de screenreader wordt gebruikt, wordt het hamburgermenu niet geopend, maar worden wel de list items hierin voorgelezen. Hetzelfde geldt als je enkel tabt door de site. De nav elementen worden geselecteerd maar zijn niet zichtbaar.
 
