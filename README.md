@@ -15,10 +15,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Rosella Moens
 
 #### Je startniveau:
-Rood
+Rood, ik vind code schrijven erg leuk om te doen. Ik help anderen ook graag met hun code. Ik geloof graag dat ik er al het een en ander vanaf weet, dus leek het me slim om in de rode piste te beginnen. 
 
 #### Je focus:
-Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen. 
+Surface plane, maar het lijkt me leuk om ook Responsive daar bovenop te doen als uitdaging. 
  
 </details>
 
