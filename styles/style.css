@@ -186,7 +186,7 @@ header section:first-of-type.scrollHeader { /* when scrolling, add .scrollHeader
   border-bottom: .1em solid var(--brand-color-lightgray);
 }
 
-header section:first-of-type > img { /* Dopper logo */
+header section:first-of-type a img { /* Dopper logo */
   height: 1.5em;
   width: auto;
 }

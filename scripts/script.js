@@ -15,6 +15,7 @@ menuButton.addEventListener("click", showMenu);
 window.addEventListener("scroll", updateScrollPosition)
 
 function updateScrollPosition() {
+    scrollPosition = window.scrollY;
 
     if (scrollPosition < 100) {
         headerSection.classList.add("scrollHeader");
@@ -29,6 +30,7 @@ function updateScrollPosition() {
 }
 
 function showMenu() { // open and close nav menu
+    scrollPosition = window.scrollY;
     navMenu.classList.toggle("showMenu"); // uses translateX to move nav into screen
 
     // conditional statement checks if navMenu contains class .showMenu
