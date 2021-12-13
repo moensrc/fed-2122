@@ -57,3 +57,4 @@ function showMenu() { // open and close nav menu
     }
 };
 
+updateScrollPosition();
