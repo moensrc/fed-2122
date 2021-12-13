@@ -186,6 +186,12 @@ header section:first-of-type.scrollHeader { /* when scrolling, add .scrollHeader
   border-bottom: .1em solid var(--brand-color-lightgray);
 }
 
+header section:first-of-type a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 header section:first-of-type a img { /* Dopper logo */
   height: 1.5em;
   width: auto;
