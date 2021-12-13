@@ -18,18 +18,18 @@ function updateScrollPosition() {
     scrollPosition = window.scrollY;
 
     if (scrollPosition < 100) {
-        headerSection.classList.add("scrollHeader");
-        menuIcon.classList.add("scrollHeader");
-        menuIcon.src = "./images/menu-white.png";
-        dopperLogo.src = "./images/dopperblauw.svg";
-        navMenu.classList.add("blueText");
-
-    } else {
         headerSection.classList.remove("scrollHeader");
         menuIcon.classList.remove("scrollHeader");
         menuIcon.src = "./images/menu.png";
         dopperLogo.src = "./images/dopperwit.svg";
         navMenu.classList.remove("blueText");
+
+    } else {
+        headerSection.classList.add("scrollHeader");
+        menuIcon.classList.add("scrollHeader");
+        menuIcon.src = "./images/menu-white.png";
+        dopperLogo.src = "./images/dopperblauw.svg";
+        navMenu.classList.add("blueText");
 
     }
 }
