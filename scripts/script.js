@@ -3,7 +3,7 @@ var menuButton = document.querySelector("header section:first-of-type button");
 var menuIcon = document.querySelector("header section:first-of-type button img");
 var navMenu = document.querySelector("header nav ul");
 
-var dopperLogo = document.querySelector("header section:first-of-type > img");
+var dopperLogo = document.querySelector("header section:first-of-type a img");
 var headerSection = document.querySelector("header section:first-of-type");
 
 var scrollPosition = window.scrollY; // sets scroll position from the top of the page
