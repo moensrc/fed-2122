@@ -17,7 +17,7 @@ window.addEventListener("scroll", updateScrollPosition)
 function updateScrollPosition() {
     scrollPosition = window.scrollY;
 
-    if (scrollPosition > 100) {
+    if (scrollPosition < 100) {
         headerSection.classList.remove("scrollHeader");
         menuIcon.classList.remove("scrollHeader");
         menuIcon.src = "./images/menu.png";
