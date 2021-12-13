@@ -20,7 +20,7 @@ function updateScrollPosition() {
     if (scrollPosition > 100) {
         headerSection.classList.remove("scrollHeader");
         menuIcon.classList.remove("scrollHeader");
-        menuIcon.src = "./images/menu=.png";
+        menuIcon.src = "./images/menu.png";
         dopperLogo.src = "./images/dopperwit.svg";
         navMenu.classList.remove("blueText");
 
