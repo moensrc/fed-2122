@@ -177,7 +177,7 @@ header section:first-of-type {
   align-items: center;
 
   background-color: transparent;
-  border-bottom: .1em solid var(--brand-color-white);
+  border-bottom: .04em solid var(--brand-color-white);
   
 }
 
@@ -691,7 +691,7 @@ main section:nth-of-type(5) a:focus { /* hover and focus states for the buttons 
   font-weight: 600;
 
   background-color: var(--brand-color-teal);
-  transition: .5s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 /* fifth section in main (home page): 'geinteresseerd in onze flessen?' */ 
@@ -752,7 +752,7 @@ main section:nth-of-type(6) a img {
 
 /* seventh section in main (home page): newsletter signup */ 
 main section:nth-of-type(7) {
-  padding-top: 2em;
+  padding-top: 5em;
 
   background-color: var(--brand-color-lightblue);
 }
@@ -1160,6 +1160,10 @@ main section:nth-of-type(7) button:active {
     display: none;
   }
 
+  header nav {
+    position: relative;
+  }
+
   header nav ul { /* restyle the ul for min-width = 768px and beyond */
     display: flex;
     flex-direction: row; /* all li in a row */
@@ -1169,7 +1173,7 @@ main section:nth-of-type(7) button:active {
     padding: 0;
 
     position: fixed; /* fix nav to the top */
-    left: calc(55% / 2);
+    left: calc(65vw / 2);
     top: initial;
     bottom: initial;
     right: initial;
@@ -1429,10 +1433,10 @@ main section:nth-of-type(7) button:active {
     padding: 1em 2em;
   }
 
-  header nav ul {
+  /* header nav ul {
     left: calc(60% / 2);
 
-  }
+  } */
 
 
 
