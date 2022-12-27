@@ -555,6 +555,11 @@ main section:nth-of-type(2) {
   color: var(--brand-color-white);
 }
 
+main section:nth-of-type(2) div {
+  display: flex;
+  flex-direction: column;
+}
+
 main section:nth-of-type(2) h2, 
 main section:nth-of-type(2) h3 {
   color: var(--brand-color-white);
@@ -566,7 +571,7 @@ main section:nth-of-type(2) h3 {
   order: -1;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 main section:nth-of-type(2) img {
